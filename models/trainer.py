@@ -227,9 +227,9 @@ class Trainer(object):
             self.model.eval()
         stats = Statistics()
 
-        can_path = '%s_step%d.candidate' % (self.args.result_path, step)
-        gold_path = '%s_step%d.gold' % (self.args.result_path, step)
-        origin_path = '%s_step%d.origin' % (self.args.result_path, step)
+        can_path = '%s_step%d.candidate' % (self.args.result_path + self.args.data_name, step)
+        gold_path = '%s_step%d.gold' % (self.args.result_path + self.args.data_name, step)
+        origin_path = '%s_step%d.origin' % (self.args.result_path + self.args.data_name, step)
         with open(can_path, 'w', encoding='utf-8') as save_pred:
             with open(gold_path, 'w', encoding='utf-8') as save_gold:
                 with torch.no_grad():

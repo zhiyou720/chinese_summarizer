@@ -157,5 +157,9 @@ def remove_old_file(path):
         os.remove(path)
 
 
+def delete_file(path):
+    os.remove(path)
+
+
 if __name__ == '__main__':
     pass

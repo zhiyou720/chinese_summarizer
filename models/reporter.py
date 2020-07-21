@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 from models.stats import Statistics
-from others.logging import logger
+from utils.logging import logger
 
 
 def build_report_manager(opt):

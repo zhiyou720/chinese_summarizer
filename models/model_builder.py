@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from pytorch_pretrained_bert import BertModel, BertConfig
+from .pytorch_pretrained_bert.modeling import BertModel, BertConfig
 from torch.nn.init import xavier_uniform_
 
 from models.encoder import TransformerInterEncoder, Classifier, RNNEncoder
@@ -40,11 +40,11 @@ def build_optim(args, model, checkpoint):
 
 
 class Bert(nn.Module):
-    def __init__(self, temp_dir, load_pretrained_bert, bert_config):
+    def __init__(self, model_dir, temp_dir, load_pretrained_bert, bert_config):
         super(Bert, self).__init__()
-        if (load_pretrained_bert):
+        if load_pretrained_bert:
             # self.models = BertModel.from_pretrained('bert-base-uncased', cache_dir=temp_dir)
-            self.model = BertModel.from_pretrained('bert-base-chinese', cache_dir=temp_dir)
+            self.model = BertModel.from_pretrained(model_dir, cache_dir=temp_dir)
         else:
             self.model = BertModel(bert_config)
 
@@ -59,17 +59,17 @@ class Summarizer(nn.Module):
         super(Summarizer, self).__init__()
         self.args = args
         self.device = device
-        self.bert = Bert(args.temp_dir, load_pretrained_bert, bert_config)
-        if (args.encoder == 'classifier'):
+        self.bert = Bert(args.bert_pretrained_model_path, args.temp_dir, load_pretrained_bert, bert_config)
+        if args.encoder == 'classifier':
             self.encoder = Classifier(self.bert.model.config.hidden_size)
-        elif (args.encoder == 'transformer'):
+        elif args.encoder == 'transformer':
             self.encoder = TransformerInterEncoder(self.bert.model.config.hidden_size, args.ff_size, args.heads,
                                                    args.dropout, args.inter_layers)
-        elif (args.encoder == 'rnn'):
+        elif args.encoder == 'rnn':
             self.encoder = RNNEncoder(bidirectional=True, num_layers=1,
                                       input_size=self.bert.model.config.hidden_size, hidden_size=args.rnn_size,
                                       dropout=args.dropout)
-        elif (args.encoder == 'baseline'):
+        elif args.encoder == 'baseline':
             bert_config = BertConfig(self.bert.model.config.vocab_size, hidden_size=args.hidden_size,
                                      num_hidden_layers=6, num_attention_heads=8, intermediate_size=args.ff_size)
             self.bert.model = BertModel(bert_config)

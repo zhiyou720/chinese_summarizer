@@ -1,4 +1,4 @@
-from utils.dataio import load_txt_data, save_txt_file
+from utils.dataio import load_txt_data, save_txt_file, load_file_name, delete_file
 from tqdm import tqdm
 
 
@@ -20,7 +20,7 @@ def merge_files(path_list, merge_path):
 def split_doc(data_path, out_path):
     data = load_txt_data(data_path)
     doc_index = 0
-    for i in tqdm(range(len(data))):
+    for i in tqdm(range(len(data)), desc='split_doc'):
         line = data[i].split(',')
         abstract = " ".join(line[0])
         document = [' '.join(x) for x in line[1].split("。")]
@@ -51,12 +51,18 @@ def split_doc2(data_path, out_path):
         except IndexError:
             continue
 
-    # print(document)
+        # print(document)
         for j in range(len(document)):
             document[j] = document[j] + '\n'
         new_doc = document + ['@highlight\n'] + [abstract]
         save_txt_file(new_doc, out_path + str(doc_index) + '.story')
         doc_index += 1
+
+
+def delete_data(path, b_range=None, e_range=None):
+    all_files = load_file_name(path)[2]
+    for i in tqdm(all_files, desc="delete files"):
+        delete_file(path + i)
 
 
 if __name__ == '__main__':
@@ -65,8 +71,9 @@ if __name__ == '__main__':
         "./data/test.csv",
         "./data/train.csv"
     ]
-    _mp = '../data/raw_data/文章内容.csv'
+    _mp = '../data/raw_data/merged.csv'
     # merge_files(_pl, _mp)
     _op = 'C:\\Users\\VY\\Desktop\\Project/data/split_data/'
-    split_doc2(_mp, _op)
+    # split_doc(_mp, _op)
     _s = '。'
+    delete_data('./data/split_data/', 100000)

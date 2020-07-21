@@ -197,16 +197,15 @@ class BertData():
 
 
 def format_to_bert(args):
-    if (args.dataset != ''):
+    if args.dataset != '':
         datasets = [args.dataset]
     else:
         datasets = ['train', 'valid', 'test']
     for corpus_type in datasets:
         a_lst = []
-        for json_f in glob.glob(pjoin(args.raw_path, '*' + corpus_type + '.*.json')):
-            real_name = json_f.split('/')[-1]
-            a_lst.append((json_f, args, pjoin(args.save_path, real_name.replace('json', 'bert.pt'))))
-        print(a_lst)
+        for json_f in glob.glob(pjoin(args.json_path, '*' + corpus_type + '.*.json')):
+            real_name = json_f.split('/')[-1].split('\\')[-1]
+            a_lst.append((json_f, args, pjoin(args.bert_path, real_name.replace('json', 'bert.pt'))))
         pool = Pool(args.n_cpus)
         for d in pool.imap(_format_to_bert, a_lst):
             pass
@@ -216,8 +215,8 @@ def format_to_bert(args):
 
 
 def tokenize(args):
-    stories_dir = os.path.abspath(args.raw_path)
-    tokenized_stories_dir = os.path.abspath(args.save_path)
+    stories_dir = os.path.abspath(args.split_path)
+    tokenized_stories_dir = os.path.abspath(args.tokenize_path)
 
     print("Preparing to tokenize %s to %s..." % (stories_dir, tokenized_stories_dir))
     stories = os.listdir(stories_dir)
@@ -244,32 +243,36 @@ def tokenize(args):
     num_tokenized = len(os.listdir(tokenized_stories_dir))
     if num_orig != num_tokenized:
         raise Exception(
-            "The tokenized stories directory %s contains %i files, but it should contain the same number as %s (which has %i files). Was there an error during tokenization?" % (
-                tokenized_stories_dir, num_tokenized, stories_dir, num_orig))
+            "The tokenized stories directory %s contains %i files, but it should contain the same number as %s "
+            "(which has %i files). Was there an error during tokenization?" % (tokenized_stories_dir, num_tokenized,
+                                                                               stories_dir, num_orig))
     print("Successfully finished tokenizing %s to %s.\n" % (stories_dir, tokenized_stories_dir))
 
 
 def _format_to_bert(params):
     json_file, args, save_file = params
-    if (os.path.exists(save_file)):
+    # print(params[2])
+    if os.path.exists(save_file):
         logger.info('Ignore %s' % save_file)
         return
 
     bert = BertData(args)
 
     logger.info('Processing %s' % json_file)
-
+    print('Processing %s' % json_file)
     jobs = json.load(open(json_file, 'r', encoding='UTF-8'))
 
     datasets = []
     for d in jobs:
         source, tgt = d['src'], d['tgt']
-        if (args.oracle_mode == 'greedy'):
+        if args.oracle_mode == 'greedy':
             oracle_ids = greedy_selection(source, tgt, 3)
-        elif (args.oracle_mode == 'combination'):
+        elif args.oracle_mode == 'combination':
             oracle_ids = combination_selection(source, tgt, 3)
+        else:
+            raise ValueError
         b_data = bert.preprocess(source, tgt, oracle_ids)
-        if (b_data is None):
+        if b_data is None:
             continue
         indexed_tokens, labels, segments_ids, cls_ids, src_txt, tgt_txt = b_data
         b_data_dict = {"src": indexed_tokens, "labels": labels, "segs": segments_ids, 'clss': cls_ids,
@@ -289,7 +292,7 @@ def format_to_lines(args):
     #         temp.append(hashhex(line.strip()))
     #     corpus_mapping[corpus_type] = {key.strip(): 1 for key in temp}
     train_files, valid_files, test_files = [], [], []
-    for f in glob.glob(pjoin(args.raw_path, '*.json')):
+    for f in glob.glob(pjoin(args.tokenize_path, '*.json')):
         # real_name = f.split('/')[-1].split('.')[0]
         # if real_name in corpus_mapping['valid']:
         #     valid_files.append(f)
@@ -298,7 +301,7 @@ def format_to_lines(args):
         # elif real_name in corpus_mapping['train']:
         #     train_files.append(f)
         import random
-        n = random.randint(1, 10)
+        n = random.randint(1, 50)
         # n = 3
         if n == 1 or n == 2:
             valid_files.append(f)
@@ -315,7 +318,7 @@ def format_to_lines(args):
         for d in pool.imap_unordered(_format_to_lines, a_lst):
             dataset.append(d)
             if len(dataset) > args.shard_size:
-                pt_file = "{:s}.{:s}.{:d}.json".format(args.save_path, corpus_type, p_ct)
+                pt_file = "{:s}.{:s}.{:d}.json".format(args.json_path+args.data_name, corpus_type, p_ct)
                 with open(pt_file, 'w', encoding='utf-8') as save:
                     # save.write('\n'.join(dataset))
                     save.write(json.dumps(dataset, ensure_ascii=False))
@@ -326,7 +329,7 @@ def format_to_lines(args):
         pool.close()
         pool.join()
         if len(dataset) > 0:
-            pt_file = "{:s}.{:s}.{:d}.json".format(args.save_path, corpus_type, p_ct)
+            pt_file = "{:s}.{:s}.{:d}.json".format(args.json_path+args.data_name, corpus_type, p_ct)
             with open(pt_file, 'w', encoding='utf-8') as save:
                 # save.write('\n'.join(dataset))
                 save.write(json.dumps(dataset, ensure_ascii=False))

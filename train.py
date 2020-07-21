@@ -147,6 +147,10 @@ class Running(object):
         elif cal_oracle:
             trainer.test(test_iter, 0, cal_oracle=True)
 
+    def train_iter(self):
+        return data_loader.DataLoader(self.args, data_loader.load_dataset(self.args, 'train', shuffle=True),
+                                      self.args.batch_size, self.device, shuffle=True, is_test=False)
+
     def train(self):
         model = model_builder.Summarizer(self.args, self.device, load_pretrained_bert=True)
 
@@ -164,10 +168,7 @@ class Running(object):
 
         logger.info(model)
         trainer = build_trainer(self.args, self.device_id, model, optimizer)
-        train_iter = data_loader.DataLoader(self.args, data_loader.load_dataset(self.args, 'train', shuffle=True),
-                                            self.args.batch_size,
-                                            self.device, shuffle=True, is_test=False)
-        trainer.train(train_iter, self.args.train_steps)
+        trainer.train(self.train_iter, self.args.train_steps)
 
     def validate(self, step):
 
@@ -267,11 +268,13 @@ if __name__ == '__main__':
     parser.add_argument("-encoder", default='transformer', type=str,
                         choices=['classifier', 'transformer', 'rnn', 'baseline'])
     parser.add_argument("-mode", default='train', type=str, choices=['train', 'validate', 'test'])
-    parser.add_argument("-bert_data_path", default='./chinese/data/')
-    parser.add_argument("-model_path", default='../models/')
-    parser.add_argument("-result_path", default='../results/cnndm')
-    parser.add_argument("-temp_dir", default='../temp')
-    parser.add_argument("-bert_config_path", default='./pytorch_pretrained_bert/bert_pretrain/bert_config.json')
+    parser.add_argument("-data_name", default='chinese_summary')
+    parser.add_argument("-bert_data_path", default='./data/bert_data/')
+    parser.add_argument("-model_path", default='./models/models_check_points/')
+    parser.add_argument("-result_path", default='../results/')
+    parser.add_argument("-temp_dir", default='./temp/')
+    parser.add_argument("-bert_pretrained_model_path", default='./models/pytorch_pretrained_bert/bert_pretrain/')
+    parser.add_argument("-bert_config_path", default='./models/pytorch_pretrained_bert/bert_pretrain/bert_config.json')
 
     parser.add_argument("-batch_size", default=1000, type=int)
 
@@ -285,8 +288,8 @@ if __name__ == '__main__':
     parser.add_argument("-param_init", default=0, type=float)
     parser.add_argument("-param_init_glorot", type=str2bool, nargs='?', const=True, default=True)
     parser.add_argument("-dropout", default=0.1, type=float)
-    parser.add_argument("-optim", default='adam', type=str)
-    parser.add_argument("-lr", default=2e-3, type=float)
+    parser.add_argument("-optimizer", default='adam', type=str)
+    parser.add_argument("-lr", default=2e-3, type=float, help='learning rate')
     parser.add_argument("-beta1", default=0.9, type=float)
     parser.add_argument("-beta2", default=0.999, type=float)
     parser.add_argument("-decay_method", default='noam', type=str)
@@ -302,13 +305,13 @@ if __name__ == '__main__':
 
     parser.add_argument('-visible_gpus', default='0', type=str)
     parser.add_argument('-gpu_ranks', default='0', type=str)
-    parser.add_argument('-log_file', default='../logs/cnndm.log')
+    parser.add_argument('-log_file', default='./logs/project.log')
     parser.add_argument('-dataset', default='')
     parser.add_argument('-seed', default=666, type=int)
 
     parser.add_argument("-test_all", type=str2bool, nargs='?', const=True, default=False)
-    parser.add_argument("-test_from", default='../models/model_step_50000.pt')
-    parser.add_argument("-train_from", default=None, help='../models/model_step_45000.pt')
+    parser.add_argument("-test_from", default='./models/model_step_50000.pt')
+    parser.add_argument("-train_from", default='', help='./models/model_step_45000.pt')
     parser.add_argument("-validate_from", default='../models/model_step_50000.pt')
     parser.add_argument("-report_rouge", type=str2bool, nargs='?', const=True, default=True)
     parser.add_argument("-block_trigram", type=str2bool, nargs='?', const=True, default=True)
