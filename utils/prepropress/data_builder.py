@@ -205,7 +205,10 @@ def format_to_bert(args):
         a_lst = []
         for json_f in glob.glob(pjoin(args.json_path, '*' + corpus_type + '.*.json')):
             real_name = json_f.split('/')[-1].split('\\')[-1]
-            a_lst.append((json_f, args, pjoin(args.bert_path, real_name.replace('json', 'bert.pt'))))
+            if not args.oov_test:
+                a_lst.append((json_f, args, pjoin(args.bert_path, real_name.replace('json', 'bert.pt'))))
+            else:
+                a_lst.append((json_f, args, pjoin(args.oov_bert_path, real_name.replace('json', 'bert.pt'))))
         pool = Pool(args.n_cpus)
         for d in pool.imap(_format_to_bert, a_lst):
             pass
@@ -301,8 +304,10 @@ def format_to_lines(args):
         # elif real_name in corpus_mapping['train']:
         #     train_files.append(f)
         import random
-        n = random.randint(1, 50)
-        # n = 3
+        if args.oov_test:
+            n = 3
+        else:
+            n = random.randint(1, 50)
         if n == 1 or n == 2:
             valid_files.append(f)
         elif n == 3:
