@@ -2656,3 +2656,190 @@
 [2020-07-21 12:15:46,688 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.609.bert.pt, number of examples: 772
 [2020-07-21 12:15:58,591 INFO] Step 150/50000; xent: 0.67; lr: 0.0000004; 110 docs/s;     42 sec
 [2020-07-21 12:16:00,788 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.168.bert.pt, number of examples: 937
+[2020-07-21 15:01:14,360 INFO] Device ID 0
+[2020-07-21 15:01:14,360 INFO] Device cuda
+[2020-07-21 15:01:14,385 INFO] Loading checkpoint from ./models/model_step_50000.pt
+[2020-07-21 15:01:55,576 INFO] Device ID 0
+[2020-07-21 15:01:55,577 INFO] Device cuda
+[2020-07-21 15:01:55,599 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:03:00,061 INFO] Device ID 0
+[2020-07-21 15:03:00,061 INFO] Device cuda
+[2020-07-21 15:03:00,087 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:04:05,892 INFO] Device ID 0
+[2020-07-21 15:04:05,892 INFO] Device cuda
+[2020-07-21 15:04:05,915 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:06:59,319 INFO] Device ID 0
+[2020-07-21 15:06:59,319 INFO] Device cuda
+[2020-07-21 15:06:59,345 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:08:58,398 INFO] Device ID 0
+[2020-07-21 15:08:58,398 INFO] Device cuda
+[2020-07-21 15:08:58,426 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:09:29,877 INFO] Device ID 0
+[2020-07-21 15:09:29,877 INFO] Device cuda
+[2020-07-21 15:09:29,907 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:09:32,106 INFO] Loading test dataset from ./data/oov_data\vy_text.test.0.bert.pt, number of examples: 887
+[2020-07-21 15:09:32,109 INFO] * number of parameters: 113297921
+[2020-07-21 15:09:37,050 INFO] Loading test dataset from ./data/oov_data\vy_text.test.1.bert.pt, number of examples: 1047
+[2020-07-21 15:09:42,700 INFO] Loading test dataset from ./data/oov_data\vy_text.test.10.bert.pt, number of examples: 1207
+[2020-07-21 15:09:48,945 INFO] Loading test dataset from ./data/oov_data\vy_text.test.11.bert.pt, number of examples: 738
+[2020-07-21 15:09:52,772 INFO] Loading test dataset from ./data/oov_data\vy_text.test.12.bert.pt, number of examples: 936
+[2020-07-21 15:09:57,635 INFO] Loading test dataset from ./data/oov_data\vy_text.test.13.bert.pt, number of examples: 973
+[2020-07-21 15:10:02,683 INFO] Loading test dataset from ./data/oov_data\vy_text.test.14.bert.pt, number of examples: 927
+[2020-07-21 15:10:07,522 INFO] Loading test dataset from ./data/oov_data\vy_text.test.15.bert.pt, number of examples: 974
+[2020-07-21 15:10:12,602 INFO] Loading test dataset from ./data/oov_data\vy_text.test.16.bert.pt, number of examples: 1065
+[2020-07-21 15:10:18,108 INFO] Loading test dataset from ./data/oov_data\vy_text.test.17.bert.pt, number of examples: 1047
+[2020-07-21 15:10:23,590 INFO] Loading test dataset from ./data/oov_data\vy_text.test.18.bert.pt, number of examples: 1016
+[2020-07-21 15:10:28,909 INFO] Loading test dataset from ./data/oov_data\vy_text.test.19.bert.pt, number of examples: 843
+[2020-07-21 15:10:33,310 INFO] Loading test dataset from ./data/oov_data\vy_text.test.2.bert.pt, number of examples: 1150
+[2020-07-21 15:10:39,339 INFO] Loading test dataset from ./data/oov_data\vy_text.test.20.bert.pt, number of examples: 1115
+[2020-07-21 15:10:45,134 INFO] Loading test dataset from ./data/oov_data\vy_text.test.21.bert.pt, number of examples: 1001
+[2020-07-21 15:10:50,355 INFO] Loading test dataset from ./data/oov_data\vy_text.test.22.bert.pt, number of examples: 992
+[2020-07-21 15:10:55,586 INFO] Loading test dataset from ./data/oov_data\vy_text.test.23.bert.pt, number of examples: 1345
+[2020-07-21 15:11:02,569 INFO] Loading test dataset from ./data/oov_data\vy_text.test.24.bert.pt, number of examples: 992
+[2020-07-21 15:11:07,797 INFO] Loading test dataset from ./data/oov_data\vy_text.test.25.bert.pt, number of examples: 1133
+[2020-07-21 15:11:13,676 INFO] Loading test dataset from ./data/oov_data\vy_text.test.26.bert.pt, number of examples: 1030
+[2020-07-21 15:11:18,997 INFO] Loading test dataset from ./data/oov_data\vy_text.test.27.bert.pt, number of examples: 1015
+[2020-07-21 15:11:24,291 INFO] Loading test dataset from ./data/oov_data\vy_text.test.28.bert.pt, number of examples: 905
+[2020-07-21 15:11:28,988 INFO] Loading test dataset from ./data/oov_data\vy_text.test.29.bert.pt, number of examples: 988
+[2020-07-21 15:11:34,202 INFO] Loading test dataset from ./data/oov_data\vy_text.test.3.bert.pt, number of examples: 1058
+[2020-07-21 15:11:39,716 INFO] Loading test dataset from ./data/oov_data\vy_text.test.30.bert.pt, number of examples: 940
+[2020-07-21 15:11:44,613 INFO] Loading test dataset from ./data/oov_data\vy_text.test.31.bert.pt, number of examples: 896
+[2020-07-21 15:11:49,359 INFO] Loading test dataset from ./data/oov_data\vy_text.test.32.bert.pt, number of examples: 875
+[2020-07-21 15:11:53,952 INFO] Loading test dataset from ./data/oov_data\vy_text.test.33.bert.pt, number of examples: 955
+[2020-07-21 15:11:58,983 INFO] Loading test dataset from ./data/oov_data\vy_text.test.34.bert.pt, number of examples: 937
+[2020-07-21 15:12:03,899 INFO] Loading test dataset from ./data/oov_data\vy_text.test.35.bert.pt, number of examples: 1353
+[2020-07-21 15:12:10,980 INFO] Loading test dataset from ./data/oov_data\vy_text.test.36.bert.pt, number of examples: 1201
+[2020-07-21 15:12:17,262 INFO] Loading test dataset from ./data/oov_data\vy_text.test.37.bert.pt, number of examples: 903
+[2020-07-21 15:12:22,108 INFO] Loading test dataset from ./data/oov_data\vy_text.test.38.bert.pt, number of examples: 1040
+[2020-07-21 15:12:27,568 INFO] Loading test dataset from ./data/oov_data\vy_text.test.39.bert.pt, number of examples: 1214
+[2020-07-21 15:12:33,889 INFO] Loading test dataset from ./data/oov_data\vy_text.test.4.bert.pt, number of examples: 1027
+[2020-07-21 15:12:39,284 INFO] Loading test dataset from ./data/oov_data\vy_text.test.40.bert.pt, number of examples: 1136
+[2020-07-21 15:12:45,254 INFO] Loading test dataset from ./data/oov_data\vy_text.test.41.bert.pt, number of examples: 981
+[2020-07-21 15:12:50,384 INFO] Loading test dataset from ./data/oov_data\vy_text.test.42.bert.pt, number of examples: 1015
+[2020-07-21 15:12:55,765 INFO] Loading test dataset from ./data/oov_data\vy_text.test.43.bert.pt, number of examples: 1178
+[2020-07-21 15:13:01,992 INFO] Loading test dataset from ./data/oov_data\vy_text.test.44.bert.pt, number of examples: 870
+[2020-07-21 15:13:06,600 INFO] Loading test dataset from ./data/oov_data\vy_text.test.45.bert.pt, number of examples: 934
+[2020-07-21 15:13:11,507 INFO] Loading test dataset from ./data/oov_data\vy_text.test.46.bert.pt, number of examples: 934
+[2020-07-21 15:13:16,433 INFO] Loading test dataset from ./data/oov_data\vy_text.test.47.bert.pt, number of examples: 1064
+[2020-07-21 15:13:21,986 INFO] Loading test dataset from ./data/oov_data\vy_text.test.48.bert.pt, number of examples: 1013
+[2020-07-21 15:13:27,299 INFO] Loading test dataset from ./data/oov_data\vy_text.test.49.bert.pt, number of examples: 1116
+[2020-07-21 15:17:18,613 INFO] Device ID 0
+[2020-07-21 15:17:18,614 INFO] Device cuda
+[2020-07-21 15:17:18,644 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:17:20,840 INFO] Loading test dataset from ./data/oov_data\vy_text.test.0.bert.pt, number of examples: 887
+[2020-07-21 15:17:20,843 INFO] * number of parameters: 113297921
+[2020-07-21 15:17:25,659 INFO] Loading test dataset from ./data/oov_data\vy_text.test.1.bert.pt, number of examples: 1047
+[2020-07-21 15:17:31,159 INFO] Loading test dataset from ./data/oov_data\vy_text.test.10.bert.pt, number of examples: 1207
+[2020-07-21 15:17:37,652 INFO] Loading test dataset from ./data/oov_data\vy_text.test.11.bert.pt, number of examples: 738
+[2020-07-21 15:17:41,600 INFO] Loading test dataset from ./data/oov_data\vy_text.test.12.bert.pt, number of examples: 936
+[2020-07-21 15:17:46,525 INFO] Loading test dataset from ./data/oov_data\vy_text.test.13.bert.pt, number of examples: 973
+[2020-07-21 15:17:51,663 INFO] Loading test dataset from ./data/oov_data\vy_text.test.14.bert.pt, number of examples: 927
+[2020-07-21 15:17:56,585 INFO] Loading test dataset from ./data/oov_data\vy_text.test.15.bert.pt, number of examples: 974
+[2020-07-21 15:18:01,731 INFO] Loading test dataset from ./data/oov_data\vy_text.test.16.bert.pt, number of examples: 1065
+[2020-07-21 15:18:07,299 INFO] Loading test dataset from ./data/oov_data\vy_text.test.17.bert.pt, number of examples: 1047
+[2020-07-21 15:18:12,974 INFO] Loading test dataset from ./data/oov_data\vy_text.test.18.bert.pt, number of examples: 1016
+[2020-07-21 15:18:18,313 INFO] Loading test dataset from ./data/oov_data\vy_text.test.19.bert.pt, number of examples: 843
+[2020-07-21 15:18:22,739 INFO] Loading test dataset from ./data/oov_data\vy_text.test.2.bert.pt, number of examples: 1150
+[2020-07-21 15:18:28,812 INFO] Loading test dataset from ./data/oov_data\vy_text.test.20.bert.pt, number of examples: 1115
+[2020-07-21 15:18:34,687 INFO] Loading test dataset from ./data/oov_data\vy_text.test.21.bert.pt, number of examples: 1001
+[2020-07-21 15:18:39,925 INFO] Loading test dataset from ./data/oov_data\vy_text.test.22.bert.pt, number of examples: 992
+[2020-07-21 15:18:45,228 INFO] Loading test dataset from ./data/oov_data\vy_text.test.23.bert.pt, number of examples: 1345
+[2020-07-21 15:18:52,293 INFO] Loading test dataset from ./data/oov_data\vy_text.test.24.bert.pt, number of examples: 992
+[2020-07-21 15:18:57,549 INFO] Loading test dataset from ./data/oov_data\vy_text.test.25.bert.pt, number of examples: 1133
+[2020-07-21 15:19:03,529 INFO] Loading test dataset from ./data/oov_data\vy_text.test.26.bert.pt, number of examples: 1030
+[2020-07-21 15:19:09,034 INFO] Loading test dataset from ./data/oov_data\vy_text.test.27.bert.pt, number of examples: 1015
+[2020-07-21 15:19:14,493 INFO] Loading test dataset from ./data/oov_data\vy_text.test.28.bert.pt, number of examples: 905
+[2020-07-21 15:19:19,343 INFO] Loading test dataset from ./data/oov_data\vy_text.test.29.bert.pt, number of examples: 988
+[2020-07-21 15:19:24,705 INFO] Loading test dataset from ./data/oov_data\vy_text.test.3.bert.pt, number of examples: 1058
+[2020-07-21 15:19:30,485 INFO] Loading test dataset from ./data/oov_data\vy_text.test.30.bert.pt, number of examples: 940
+[2020-07-21 15:19:35,598 INFO] Loading test dataset from ./data/oov_data\vy_text.test.31.bert.pt, number of examples: 896
+[2020-07-21 15:19:40,502 INFO] Loading test dataset from ./data/oov_data\vy_text.test.32.bert.pt, number of examples: 875
+[2020-07-21 15:19:45,220 INFO] Loading test dataset from ./data/oov_data\vy_text.test.33.bert.pt, number of examples: 955
+[2020-07-21 15:19:50,345 INFO] Loading test dataset from ./data/oov_data\vy_text.test.34.bert.pt, number of examples: 937
+[2020-07-21 15:19:55,403 INFO] Loading test dataset from ./data/oov_data\vy_text.test.35.bert.pt, number of examples: 1353
+[2020-07-21 15:20:02,729 INFO] Loading test dataset from ./data/oov_data\vy_text.test.36.bert.pt, number of examples: 1201
+[2020-07-21 15:20:09,115 INFO] Loading test dataset from ./data/oov_data\vy_text.test.37.bert.pt, number of examples: 903
+[2020-07-21 15:20:14,015 INFO] Loading test dataset from ./data/oov_data\vy_text.test.38.bert.pt, number of examples: 1040
+[2020-07-21 15:20:19,639 INFO] Loading test dataset from ./data/oov_data\vy_text.test.39.bert.pt, number of examples: 1214
+[2020-07-21 15:20:26,208 INFO] Loading test dataset from ./data/oov_data\vy_text.test.4.bert.pt, number of examples: 1027
+[2020-07-21 15:20:31,681 INFO] Loading test dataset from ./data/oov_data\vy_text.test.40.bert.pt, number of examples: 1136
+[2020-07-21 15:20:37,732 INFO] Loading test dataset from ./data/oov_data\vy_text.test.41.bert.pt, number of examples: 981
+[2020-07-21 15:20:42,898 INFO] Loading test dataset from ./data/oov_data\vy_text.test.42.bert.pt, number of examples: 1015
+[2020-07-21 15:20:48,315 INFO] Loading test dataset from ./data/oov_data\vy_text.test.43.bert.pt, number of examples: 1178
+[2020-07-21 15:20:54,613 INFO] Loading test dataset from ./data/oov_data\vy_text.test.44.bert.pt, number of examples: 870
+[2020-07-21 15:20:59,256 INFO] Loading test dataset from ./data/oov_data\vy_text.test.45.bert.pt, number of examples: 934
+[2020-07-21 15:21:04,267 INFO] Loading test dataset from ./data/oov_data\vy_text.test.46.bert.pt, number of examples: 934
+[2020-07-21 15:21:09,188 INFO] Loading test dataset from ./data/oov_data\vy_text.test.47.bert.pt, number of examples: 1064
+[2020-07-21 15:21:14,757 INFO] Loading test dataset from ./data/oov_data\vy_text.test.48.bert.pt, number of examples: 1013
+[2020-07-21 15:21:20,081 INFO] Loading test dataset from ./data/oov_data\vy_text.test.5.bert.pt, number of examples: 835
+[2020-07-21 15:21:24,448 INFO] Loading test dataset from ./data/oov_data\vy_text.test.50.bert.pt, number of examples: 1117
+[2020-07-21 15:21:30,287 INFO] Loading test dataset from ./data/oov_data\vy_text.test.51.bert.pt, number of examples: 1049
+[2020-07-21 15:21:35,799 INFO] Loading test dataset from ./data/oov_data\vy_text.test.52.bert.pt, number of examples: 1220
+[2020-07-21 15:21:42,230 INFO] Loading test dataset from ./data/oov_data\vy_text.test.53.bert.pt, number of examples: 934
+[2020-07-21 15:21:47,134 INFO] Loading test dataset from ./data/oov_data\vy_text.test.54.bert.pt, number of examples: 1177
+[2020-07-21 15:22:37,175 INFO] Device ID 0
+[2020-07-21 15:22:37,175 INFO] Device cuda
+[2020-07-21 15:22:37,199 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-21 15:22:39,400 INFO] Loading test dataset from ./data/oov_data\vy_text.test.0.bert.pt, number of examples: 887
+[2020-07-21 15:22:39,404 INFO] * number of parameters: 113297921
+[2020-07-21 15:22:44,355 INFO] Loading test dataset from ./data/oov_data\vy_text.test.1.bert.pt, number of examples: 1047
+[2020-07-21 15:22:49,880 INFO] Loading test dataset from ./data/oov_data\vy_text.test.10.bert.pt, number of examples: 1207
+[2020-07-21 15:22:56,235 INFO] Loading test dataset from ./data/oov_data\vy_text.test.11.bert.pt, number of examples: 738
+[2020-07-21 15:23:00,165 INFO] Loading test dataset from ./data/oov_data\vy_text.test.12.bert.pt, number of examples: 936
+[2020-07-21 15:23:05,164 INFO] Loading test dataset from ./data/oov_data\vy_text.test.13.bert.pt, number of examples: 973
+[2020-07-21 15:23:10,356 INFO] Loading test dataset from ./data/oov_data\vy_text.test.14.bert.pt, number of examples: 927
+[2020-07-21 15:23:15,333 INFO] Loading test dataset from ./data/oov_data\vy_text.test.15.bert.pt, number of examples: 974
+[2020-07-21 15:23:20,547 INFO] Loading test dataset from ./data/oov_data\vy_text.test.16.bert.pt, number of examples: 1065
+[2020-07-21 15:23:26,208 INFO] Loading test dataset from ./data/oov_data\vy_text.test.17.bert.pt, number of examples: 1047
+[2020-07-21 15:23:31,863 INFO] Loading test dataset from ./data/oov_data\vy_text.test.18.bert.pt, number of examples: 1016
+[2020-07-21 15:23:37,291 INFO] Loading test dataset from ./data/oov_data\vy_text.test.19.bert.pt, number of examples: 843
+[2020-07-21 15:23:41,761 INFO] Loading test dataset from ./data/oov_data\vy_text.test.2.bert.pt, number of examples: 1150
+[2020-07-21 15:23:47,875 INFO] Loading test dataset from ./data/oov_data\vy_text.test.20.bert.pt, number of examples: 1115
+[2020-07-21 15:23:53,797 INFO] Loading test dataset from ./data/oov_data\vy_text.test.21.bert.pt, number of examples: 1001
+[2020-07-21 15:23:59,106 INFO] Loading test dataset from ./data/oov_data\vy_text.test.22.bert.pt, number of examples: 992
+[2020-07-21 15:24:04,520 INFO] Loading test dataset from ./data/oov_data\vy_text.test.23.bert.pt, number of examples: 1345
+[2020-07-21 15:24:11,717 INFO] Loading test dataset from ./data/oov_data\vy_text.test.24.bert.pt, number of examples: 992
+[2020-07-21 15:24:17,005 INFO] Loading test dataset from ./data/oov_data\vy_text.test.25.bert.pt, number of examples: 1133
+[2020-07-21 15:24:22,971 INFO] Loading test dataset from ./data/oov_data\vy_text.test.26.bert.pt, number of examples: 1030
+[2020-07-21 15:24:28,421 INFO] Loading test dataset from ./data/oov_data\vy_text.test.27.bert.pt, number of examples: 1015
+[2020-07-21 15:24:33,819 INFO] Loading test dataset from ./data/oov_data\vy_text.test.28.bert.pt, number of examples: 905
+[2020-07-21 15:24:38,756 INFO] Loading test dataset from ./data/oov_data\vy_text.test.29.bert.pt, number of examples: 988
+[2020-07-21 15:24:44,222 INFO] Loading test dataset from ./data/oov_data\vy_text.test.3.bert.pt, number of examples: 1058
+[2020-07-21 15:24:49,882 INFO] Loading test dataset from ./data/oov_data\vy_text.test.30.bert.pt, number of examples: 940
+[2020-07-21 15:24:54,870 INFO] Loading test dataset from ./data/oov_data\vy_text.test.31.bert.pt, number of examples: 896
+[2020-07-21 15:24:59,649 INFO] Loading test dataset from ./data/oov_data\vy_text.test.32.bert.pt, number of examples: 875
+[2020-07-21 15:25:04,265 INFO] Loading test dataset from ./data/oov_data\vy_text.test.33.bert.pt, number of examples: 955
+[2020-07-21 15:25:09,311 INFO] Loading test dataset from ./data/oov_data\vy_text.test.34.bert.pt, number of examples: 937
+[2020-07-21 15:25:14,255 INFO] Loading test dataset from ./data/oov_data\vy_text.test.35.bert.pt, number of examples: 1353
+[2020-07-21 15:25:21,349 INFO] Loading test dataset from ./data/oov_data\vy_text.test.36.bert.pt, number of examples: 1201
+[2020-07-21 15:25:27,733 INFO] Loading test dataset from ./data/oov_data\vy_text.test.37.bert.pt, number of examples: 903
+[2020-07-21 15:25:32,590 INFO] Loading test dataset from ./data/oov_data\vy_text.test.38.bert.pt, number of examples: 1040
+[2020-07-21 15:25:38,075 INFO] Loading test dataset from ./data/oov_data\vy_text.test.39.bert.pt, number of examples: 1214
+[2020-07-21 15:25:44,422 INFO] Loading test dataset from ./data/oov_data\vy_text.test.4.bert.pt, number of examples: 1027
+[2020-07-21 15:25:49,840 INFO] Loading test dataset from ./data/oov_data\vy_text.test.40.bert.pt, number of examples: 1136
+[2020-07-21 15:25:55,826 INFO] Loading test dataset from ./data/oov_data\vy_text.test.41.bert.pt, number of examples: 981
+[2020-07-21 15:26:00,977 INFO] Loading test dataset from ./data/oov_data\vy_text.test.42.bert.pt, number of examples: 1015
+[2020-07-21 15:26:06,379 INFO] Loading test dataset from ./data/oov_data\vy_text.test.43.bert.pt, number of examples: 1178
+[2020-07-21 15:26:12,620 INFO] Loading test dataset from ./data/oov_data\vy_text.test.44.bert.pt, number of examples: 870
+[2020-07-21 15:26:17,222 INFO] Loading test dataset from ./data/oov_data\vy_text.test.45.bert.pt, number of examples: 934
+[2020-07-21 15:26:22,119 INFO] Loading test dataset from ./data/oov_data\vy_text.test.46.bert.pt, number of examples: 934
+[2020-07-21 15:26:27,035 INFO] Loading test dataset from ./data/oov_data\vy_text.test.47.bert.pt, number of examples: 1064
+[2020-07-21 15:26:32,578 INFO] Loading test dataset from ./data/oov_data\vy_text.test.48.bert.pt, number of examples: 1013
+[2020-07-21 15:26:37,875 INFO] Loading test dataset from ./data/oov_data\vy_text.test.5.bert.pt, number of examples: 835
+[2020-07-21 15:26:42,236 INFO] Loading test dataset from ./data/oov_data\vy_text.test.50.bert.pt, number of examples: 1117
+[2020-07-21 15:26:48,074 INFO] Loading test dataset from ./data/oov_data\vy_text.test.51.bert.pt, number of examples: 1049
+[2020-07-21 15:26:53,589 INFO] Loading test dataset from ./data/oov_data\vy_text.test.52.bert.pt, number of examples: 1220
+[2020-07-21 15:27:00,025 INFO] Loading test dataset from ./data/oov_data\vy_text.test.53.bert.pt, number of examples: 934
+[2020-07-21 15:27:04,924 INFO] Loading test dataset from ./data/oov_data\vy_text.test.55.bert.pt, number of examples: 1071
+[2020-07-21 15:27:10,526 INFO] Loading test dataset from ./data/oov_data\vy_text.test.56.bert.pt, number of examples: 746
+[2020-07-21 15:27:14,416 INFO] Loading test dataset from ./data/oov_data\vy_text.test.6.bert.pt, number of examples: 948
+[2020-07-21 15:27:19,377 INFO] Loading test dataset from ./data/oov_data\vy_text.test.7.bert.pt, number of examples: 997
+[2020-07-21 15:27:24,609 INFO] Loading test dataset from ./data/oov_data\vy_text.test.9.bert.pt, number of examples: 1083
+[2020-07-21 15:27:54,781 INFO] Writing summaries.
+[2020-07-21 15:27:54,781 INFO] Processing summaries. Saving system files to ./temp/tmpooq5nlwk\system and model files to ./temp/tmpooq5nlwk\model.
+[2020-07-21 15:27:54,781 INFO] Processing files in ./temp/rouge-tmp-2020-07-21-15-27-30/candidate/.
+[2020-07-21 15:28:21,426 INFO] Saved processed files to ./temp/tmpooq5nlwk\system.
+[2020-07-21 15:28:21,427 INFO] Processing files in ./temp/rouge-tmp-2020-07-21-15-27-30/reference/.
+[2020-07-21 15:28:48,898 INFO] Saved processed files to ./temp/tmpooq5nlwk\model.
+[2020-07-21 15:28:49,247 INFO] Written ROUGE configuration to ./temp/tmpvfxonln2\rouge_conf.xml
+[2020-07-21 15:28:49,247 INFO] Running ROUGE with command C:\Users\VY\Desktop\Project\pyrouge\evaluation\ROUGE-RELEASE-1.5.5\ROUGE-1.5.5.pl -e C:\Users\VY\Desktop\Project\pyrouge\evaluation\ROUGE-RELEASE-1.5.5\data -c 95 -m -r 1000 -n 2 -a ./temp/tmpvfxonln2\rouge_conf.xml

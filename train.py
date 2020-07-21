@@ -249,7 +249,6 @@ class Running(object):
         for k in opt.keys():
             if k in self.model_flags:
                 setattr(self.args, k, opt[k])
-        print(self.args)
 
         config = BertConfig.from_json_file(self.args.bert_config_path)
         model = model_builder.Summarizer(self.args, self.device, load_pretrained_bert=False, bert_config=config)
@@ -267,11 +266,11 @@ if __name__ == '__main__':
 
     parser.add_argument("-encoder", default='transformer', type=str,
                         choices=['classifier', 'transformer', 'rnn', 'baseline'])
-    parser.add_argument("-mode", default='train', type=str, choices=['train', 'validate', 'test'])
-    parser.add_argument("-data_name", default='chinese_summary')
-    parser.add_argument("-bert_data_path", default='./data/bert_data/')
+    parser.add_argument("-mode", default='test', type=str, choices=['train', 'validate', 'test'])
+    parser.add_argument("-data_name", default='vy_text', help='chinese_summary')
+    parser.add_argument("-bert_data_path", default='./data/oov_data/', help='./data/bert_data/')
     parser.add_argument("-model_path", default='./models/models_check_points/')
-    parser.add_argument("-result_path", default='../results/')
+    parser.add_argument("-result_path", default='./results/')
     parser.add_argument("-temp_dir", default='./temp/')
     parser.add_argument("-bert_pretrained_model_path", default='./models/pytorch_pretrained_bert/bert_pretrain/')
     parser.add_argument("-bert_config_path", default='./models/pytorch_pretrained_bert/bert_pretrain/bert_config.json')
@@ -310,9 +309,9 @@ if __name__ == '__main__':
     parser.add_argument('-seed', default=666, type=int)
 
     parser.add_argument("-test_all", type=str2bool, nargs='?', const=True, default=False)
-    parser.add_argument("-test_from", default='./models/model_step_50000.pt')
-    parser.add_argument("-train_from", default='', help='./models/model_step_45000.pt')
-    parser.add_argument("-validate_from", default='../models/model_step_50000.pt')
+    parser.add_argument("-test_from", default='./models/models_check_points/model_step_50000.pt')
+    parser.add_argument("-train_from", default='', help='./models/models_check_points/model_step_45000.pt')
+    parser.add_argument("-validate_from", default='../models/models_check_points/model_step_50000.pt')
     parser.add_argument("-report_rouge", type=str2bool, nargs='?', const=True, default=True)
     parser.add_argument("-block_trigram", type=str2bool, nargs='?', const=True, default=True)
 
