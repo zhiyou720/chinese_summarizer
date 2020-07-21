@@ -84,6 +84,7 @@ class TransformerInterEncoder(nn.Module):
         self.layer_norm = nn.LayerNorm(d_model, eps=1e-6)
         self.wo = nn.Linear(d_model, 1, bias=True)
         self.sigmoid = nn.Sigmoid()
+        self.last_status = None
 
     def forward(self, top_vecs, mask):
         """ See :obj:`EncoderBase.forward()`"""
@@ -97,10 +98,13 @@ class TransformerInterEncoder(nn.Module):
             x = self.transformer_inter[i](i, x, x, ~ mask)  # all_sents * max_tokens * dim
 
         x = self.layer_norm(x)
+        # print(x.size())
+        # TODO: last status vector return this vector
+        self.last_status = x
         sent_scores = self.sigmoid(self.wo(x))
         sent_scores = sent_scores.squeeze(-1) * mask.float()
 
-        return sent_scores
+        return sent_scores, x
 
 
 class RNNEncoder(nn.Module):

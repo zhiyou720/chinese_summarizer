@@ -23,12 +23,17 @@ def split_doc(data_path, out_path):
     for i in tqdm(range(len(data)), desc='split_doc'):
         line = data[i].split(',')
         abstract = " ".join(line[0])
-        document = [' '.join(x) for x in line[1].split("。")]
+        from pyparsing import oneOf
+        punc = oneOf(list("。，；；！？"))
+        document = [' '.join(x) for x in punc.split(line[1])]
         # print(document)
         for j in range(len(document)):
             document[j] = document[j] + '\n'
         new_doc = document + ['@highlight\n'] + [abstract]
-        save_txt_file(new_doc, out_path + str(doc_index) + '.story')
+        _doc_index = str(doc_index)
+        while len(_doc_index) <= 8:
+            _doc_index = '0' + _doc_index
+        save_txt_file(new_doc, out_path + _doc_index + '.story')
         doc_index += 1
 
 

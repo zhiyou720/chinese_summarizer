@@ -54,6 +54,7 @@ class Batch(object):
 def batch(data, batch_size):
     """Yield elements from data in chunks of batch_size."""
     mini_batch, size_so_far = [], 0
+    # print(size_so_far)
     for ex in data:
         mini_batch.append(ex)
         size_so_far = simple_batch_size_fn(ex, len(mini_batch))
@@ -154,6 +155,11 @@ class DataIterator(object):
                  shuffle=True):
         self.args = args
         self.batch_size, self.is_test, self.dataset = batch_size, is_test, dataset
+        # for item in self.dataset:
+        #     print(item)
+        #     print(item['src'])
+        #     exit()
+        # print(len(self.dataset))
         self.iterations = 0
         self.device = device
         self.shuffle = shuffle
@@ -211,10 +217,14 @@ class DataIterator(object):
         data = self.data()
         for buffer in self.batch_buffer(data, self.batch_size * 50):
 
-            p_batch = sorted(buffer, key=lambda x: len(x[3]))
-            p_batch = batch(p_batch, self.batch_size)
-
+            p_batch = sorted(buffer, key=lambda x: len(x[3]))  # size 357
+            p_batch = batch(p_batch, self.batch_size)  # size 51
             p_batch = list(p_batch)
+
+            # print(p_batch)
+            # print(len(p_batch))
+            # exit()
+
             if self.shuffle:
                 random.shuffle(p_batch)
             for b in p_batch:
@@ -229,7 +239,10 @@ class DataIterator(object):
                     continue
                 self.iterations += 1
                 self._iterations_this_epoch += 1
-                _batch = Batch(mini_batch, self.device, self.is_test)
+                if self.args.mode == 'test':  # TODO: predict
+                    _batch = Batch(mini_batch, self.device, self.is_test)
+                else:
+                    _batch = Batch(mini_batch, self.device, self.is_test)
 
                 yield _batch
             return

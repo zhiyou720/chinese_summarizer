@@ -254,11 +254,35 @@ class Running(object):
         model = model_builder.Summarizer(self.args, self.device, load_pretrained_bert=False, bert_config=config)
         model.load_cp(checkpoint)
         model.eval()
-
+        # logger.info(model)
+        trainer = build_trainer(self.args, self.device_id, model, None)
         test_iter = data_loader.DataLoader(self.args, data_loader.load_dataset(self.args, 'test', shuffle=False),
                                            self.args.batch_size, self.device, shuffle=False, is_test=True)
-        trainer = build_trainer(self.args, self.device_id, model, None)
         trainer.test(test_iter, step)
+
+    def gen_features_vector(self, step=None):
+        if not step:
+            try:
+                step = int(self.args.test_from.split('.')[-2].split('_')[-1])
+            except IndexError:
+                step = 0
+
+        logger.info('Loading checkpoint from %s' % self.args.test_from)
+        checkpoint = torch.load(self.args.test_from, map_location=lambda storage, loc: storage)
+        opt = vars(checkpoint['opt'])
+        for k in opt.keys():
+            if k in self.model_flags:
+                setattr(self.args, k, opt[k])
+
+        config = BertConfig.from_json_file(self.args.bert_config_path)
+        model = model_builder.Summarizer(self.args, self.device, load_pretrained_bert=False, bert_config=config)
+        model.load_cp(checkpoint)
+        model.eval()
+        # logger.info(model)
+        trainer = build_trainer(self.args, self.device_id, model, None)
+        test_iter = data_loader.DataLoader(self.args, data_loader.load_dataset(self.args, 'test', shuffle=False),
+                                           self.args.batch_size, self.device, shuffle=False, is_test=True)
+        trainer.gen_features_vector(test_iter, step)
 
 
 if __name__ == '__main__':
@@ -266,9 +290,9 @@ if __name__ == '__main__':
 
     parser.add_argument("-encoder", default='transformer', type=str,
                         choices=['classifier', 'transformer', 'rnn', 'baseline'])
-    parser.add_argument("-mode", default='test', type=str, choices=['train', 'validate', 'test'])
-    parser.add_argument("-data_name", default='vy_text', help='chinese_summary')
-    parser.add_argument("-bert_data_path", default='./data/oov_data/', help='./data/bert_data/')
+    parser.add_argument("-mode", default='train', type=str, choices=['train', 'validate', 'test', 'vector'])
+    parser.add_argument("-data_name", default='vy_textchinese_summary', help='vy_text')
+    parser.add_argument("-bert_data_path", default='./data/bert_data/', help='./data/bert_data/')
     parser.add_argument("-model_path", default='./models/models_check_points/')
     parser.add_argument("-result_path", default='./results/')
     parser.add_argument("-temp_dir", default='./temp/')
@@ -312,7 +336,7 @@ if __name__ == '__main__':
     parser.add_argument("-test_from", default='./models/models_check_points/model_step_50000.pt')
     parser.add_argument("-train_from", default='', help='./models/models_check_points/model_step_45000.pt')
     parser.add_argument("-validate_from", default='../models/models_check_points/model_step_50000.pt')
-    parser.add_argument("-report_rouge", type=str2bool, nargs='?', const=True, default=True)
+    parser.add_argument("-report_rouge", type=str2bool, nargs='?', const=True, default=False)
     parser.add_argument("-block_trigram", type=str2bool, nargs='?', const=True, default=True)
 
     _args = parser.parse_args()
@@ -340,3 +364,5 @@ if __name__ == '__main__':
         runner.baseline(cal_lead=True)
     elif _args.mode == 'oracle':
         runner.baseline(cal_oracle=True)
+    elif _args.mode == 'vector':
+        runner.gen_features_vector()
