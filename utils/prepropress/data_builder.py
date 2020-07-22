@@ -10,7 +10,7 @@ from os.path import join as pjoin
 
 import torch
 from multiprocessing import Pool
-from pytorch_pretrained_bert import BertTokenizer
+from models.pytorch_pretrained_bert import BertTokenizer
 
 from utils.logging import logger
 from utils.utils import clean
