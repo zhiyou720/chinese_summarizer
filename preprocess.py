@@ -6,7 +6,7 @@ import time
 
 from utils.logging import init_logger
 from utils.prepropress import data_builder
-from utils.format_data import split_doc, delete_data
+from utils.format_data import split_doc, delete_data, merge_files
 
 
 def do_format_to_lines(args):
@@ -69,6 +69,16 @@ if __name__ == '__main__':
     _args = parser.parse_args()
     init_logger(_args.log_file)
     # eval('data_builder.' + _args.mode + '(args)')
+
+    # _pl = [
+    #     "./data/raw_data/eval.csv",
+    #     "./data/raw_data/test.csv",
+    #     "./data/raw_data/train.csv"
+    # ]
+    # _mp = './data/raw_data/merged.csv'
+    # merge_files(_pl, _mp)
+    # exit()
+
 
     # Split files
     split_doc(_args.raw_path, _args.split_path)
