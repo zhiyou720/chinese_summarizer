@@ -376,7 +376,7 @@ def tokenize_format_lines(args):
     input_data = load_txt_data(input_path)
     pun = oneOf(list("。，；；！？"))
     json_data_set = []
-    for raw in tqdm(input_data[:100000]):
+    for raw in tqdm(input_data[:10000]):
         json_dict = {}
         raw = raw.split(',')
         abstract = [list(raw[0])]

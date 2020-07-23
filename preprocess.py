@@ -67,7 +67,6 @@ if __name__ == '__main__':
 
     parser.add_argument('-n_cpus', default=10, type=int)
 
-
     _args = parser.parse_args()
     init_logger(_args.log_file)
     # eval('data_builder.' + _args.mode + '(args)')
@@ -81,25 +80,24 @@ if __name__ == '__main__':
     # merge_files(_pl, _mp)
     # exit()
 
-
     # Split files
-    split_doc(_args.raw_path, _args.split_path)
+    # split_doc(_args.raw_path, _args.split_path)
 
     # tokenize
-    do_tokenize(_args)
+    # do_tokenize(_args)
     # Remove all split files
-    delete_data(_args.split_path)
+    # delete_data(_args.split_path)
 
     # Merge files
-    do_format_to_lines(_args)
+    # do_format_to_lines(_args)
     # Remove all tokens files
-    delete_data(_args.tokenize_path)
+    # delete_data(_args.tokenize_path)
 
 
     # Format to bert data
-    do_format_to_bert(_args)
+    # do_format_to_bert(_args)
     # Remove all json files
-    delete_data(_args.json_path)
+    # delete_data(_args.json_path)
 
     from utils.format_data import revers_index, filter_data
 
@@ -120,6 +118,6 @@ if __name__ == '__main__':
     #         for ssub in item[sub]:
     #             print(ssub)
     # print(data[0])
-    # json_data_set = data_builder.tokenize_format_lines(_args)
+    json_data_set = data_builder.tokenize_format_lines(_args)
 
-    # data_builder.format2bert(_args, json_data_set)
+    data_builder.format2bert(_args, json_data_set)

@@ -103,7 +103,6 @@ class TransformerInterEncoder(nn.Module):
         # self.last_status = x
         sent_scores = self.sigmoid(self.wo(x))
         sent_scores = sent_scores.squeeze(-1) * mask.float()
-
         return sent_scores
 
 

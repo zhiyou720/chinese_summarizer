@@ -74,3 +74,7 @@
 [2020-07-23 00:20:06,127 INFO] Saving to ./data/bert_data/
 [2020-07-23 02:35:45,531 INFO] loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at C:\Users\zk\.pytorch_pretrained_bert\8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
 [2020-07-23 02:36:57,853 INFO] Saving to ./data/bert_data/
+[2020-07-23 18:11:46,602 INFO] loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at C:\Users\zk\.pytorch_pretrained_bert\8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2020-07-23 18:11:46,688 INFO] Saving to ./data/bert_data/
+[2020-07-23 18:12:52,890 INFO] loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at C:\Users\zk\.pytorch_pretrained_bert\8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+[2020-07-23 18:13:00,381 INFO] Saving to ./data/bert_data/
