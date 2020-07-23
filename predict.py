@@ -66,6 +66,10 @@ class Running(object):
         trainer.predict(test_iter, self.step)
 
 
+
+
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
@@ -112,11 +116,12 @@ if __name__ == '__main__':
     parser.add_argument('-seed', default=666, type=int)
 
     parser.add_argument("-test_all", type=str2bool, nargs='?', const=True, default=False)
-    parser.add_argument("-test_from", default='./models/models_check_points/model_step_10000.pt')
+    parser.add_argument("-test_from", default='./models/models_check_points/model_step_50000.pt')
     parser.add_argument("-report_rouge", type=str2bool, nargs='?', const=True, default=False)
     parser.add_argument("-block_trigram", type=str2bool, nargs='?', const=True, default=True)
 
     parser.add_argument("-shuffle_data", type=str2bool, nargs='?', const=False, default=False)
+    parser.add_argument("-vy_predict", type=str2bool, nargs='?', const=False, default=True)
 
     _args = parser.parse_args()
 

@@ -161,7 +161,7 @@ class BertData:
         self.cls_vid = self.tokenizer.vocab['[CLS]']
         self.pad_vid = self.tokenizer.vocab['[PAD]']
 
-    def pre_process(self, src, tgt, oracle_ids):
+    def pre_process(self, src, tgt, oracle_ids, flag_i):
 
         if len(src) == 0:
             return None
@@ -183,6 +183,8 @@ class BertData:
             print(1)
             return None
         if len(labels) == 0:
+            print(flag_i)
+            print(idxs)
             print(src)
             print(tgt)
             print(oracle_ids)
@@ -374,20 +376,27 @@ def tokenize_format_lines(args):
     input_path = args.raw_path
     output_path = args.json_path + args.data_name + '.json'
     input_data = load_txt_data(input_path)
-    pun = oneOf(list("。，；；！？"))
+    pun = oneOf(list("。，,；：（）()！？\\—、丨/"))
     json_data_set = []
-    for raw in tqdm(input_data[:10000]):
+    for i in tqdm(range(len(input_data))):
         json_dict = {}
-        raw = raw.split(',')
-        abstract = [list(raw[0])]
-        sentence = pun.split(raw[1])
+        raw = input_data[i].split(',', 4)
+        if args.vy_predict:
+            abstract = [list('NONE')]
+            sentence = pun.split(re.sub("\"", '', raw[4]))
+        else:
+            abstract = [list(raw[0])]
+            sentence = pun.split(raw[1])
         split_sentence = []
         for split_content in sentence:
             split_content = list(split_content)
             if split_content:
                 split_sentence.append(split_content)
+
         json_dict['src'] = split_sentence
         json_dict['tgt'] = abstract
+        if args.vy_predict:
+            json_dict['doc_id'] = raw[0]
         json_data_set.append(json_dict)
     # with open(output_path, 'w', encoding='utf-8') as save:
     #     save.write(json.dumps(json_data_set, ensure_ascii=False))
@@ -399,32 +408,39 @@ def format2bert(args, json_data_set):
     bert = BertData(args)
     for i in tqdm(range(len(json_data_set))):
         source, tgt = json_data_set[i]['src'], json_data_set[i]['tgt']
-        summary_size = int(len(source)/2)
+        summary_size = int(len(source) / 2)
+
         if summary_size > 5:
             summary_size = 5
+        if (len(source) == 1 and len(source[0]) == 1) or not source:
+            source = 'CAN NOT PREDICT: "{}"'.format(source)
 
-        if args.oracle_mode == 'greedy':
+        doc_id = 0
+        if args.vy_predict:
+            oracle_ids = [0]
+            doc_id = json_data_set[i]['doc_id']
+        elif args.oracle_mode == 'greedy':
             oracle_ids = greedy_selection(source, tgt, summary_size)
         elif args.oracle_mode == 'combination':
             oracle_ids = combination_selection(source, tgt, summary_size)
         else:
             raise ValueError
-        # if i >= 17:
-        #     print(source)
-        #     print(tgt)
-        #     print(oracle_ids)
-        if not oracle_ids:
+        if not oracle_ids and oracle_ids != [0]:
+            print('jump')
             continue
-        b_data = bert.pre_process(source, tgt, oracle_ids)
+        b_data = bert.pre_process(source, tgt, oracle_ids, i)
 
         indexed_tokens, labels, segments_ids, cls_ids, src_txt, tgt_txt = b_data
-        b_data_dict = {"src": indexed_tokens, "labels": labels, "segs": segments_ids, 'clss': cls_ids,
-                       'src_txt': src_txt, "tgt_txt": tgt_txt}
+
+        if args.vy_predict:
+            b_data_dict = {"src": indexed_tokens, "labels": labels, "segs": segments_ids, 'clss': cls_ids,
+                           'src_txt': src_txt, "tgt_txt": tgt_txt, 'doc_id': doc_id}
+        else:
+            b_data_dict = {"src": indexed_tokens, "labels": labels, "segs": segments_ids, 'clss': cls_ids,
+                           'src_txt': src_txt, "tgt_txt": tgt_txt}
+
         datasets.append(b_data_dict)
-    i = 0
-    while len(datasets) > 10000:
-        torch.save(datasets[:10000], args.bert_path + args.data_name + '.{}.{}.bert.pt'.format('train', i))
-        i += 1
-        datasets = datasets[10000:]
-    torch.save(datasets, args.bert_path + args.data_name + '.{}.{}.bert.pt'.format('train', i))
+    # TODO: data type
+    data_type = 'test'
+    torch.save(datasets, args.bert_path + args.data_name + '.{}.{}.bert.pt'.format(data_type, 0))
     logger.info('Saving to %s' % args.bert_path)

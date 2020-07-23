@@ -8,10 +8,11 @@ from utils.logging import logger
 
 class Batch(object):
 
-    def __init__(self, data=None, device=None, is_test=False):
+    def __init__(self, data=None, device=None, is_test=False, vy_predict=False):
         """Create a Batch from a list of examples."""
         if data is not None:
             self.batch_size = len(data)
+
             pre_src = [x[0] for x in data]
             pre_labels = [x[1] for x in data]
             pre_segments = [x[2] for x in data]
@@ -34,7 +35,14 @@ class Batch(object):
             setattr(self, 'segs', segs.to(device))
             setattr(self, 'mask', mask.to(device))
 
-            if is_test:
+            if vy_predict and is_test:
+                src_str = [x[-3] for x in data]
+                setattr(self, 'src_str', src_str)
+                tgt_str = [x[-2] for x in data]
+                setattr(self, 'tgt_str', tgt_str)
+                doc_id = [x[-1] for x in data]
+                setattr(self, 'doc_id', doc_id)
+            elif is_test:
                 src_str = [x[-2] for x in data]
                 setattr(self, 'src_str', src_str)
                 tgt_str = [x[-1] for x in data]
@@ -154,7 +162,7 @@ class DataLoader(object):
 
 class DataIterator(object):
     def __init__(self, args, dataset, batch_size, device=None, is_test=False,
-                 shuffle=True):
+                 shuffle=False):
         self.args = args
         self.batch_size, self.is_test, self.dataset = batch_size, is_test, dataset
         # for item in self.dataset:
@@ -189,8 +197,10 @@ class DataIterator(object):
         clss = ex['clss']
         src_txt = ex['src_txt']
         tgt_txt = ex['tgt_txt']
-
-        if is_test:
+        if is_test and self.args.vy_predict:
+            doc_ic = ex['doc_id']
+            return src, labels, segs, clss, src_txt, tgt_txt, doc_ic
+        elif is_test:
             return src, labels, segs, clss, src_txt, tgt_txt
         else:
             return src, labels, segs, clss
@@ -243,7 +253,7 @@ class DataIterator(object):
                 self.iterations += 1
                 self._iterations_this_epoch += 1
                 # print(len(mini_batch))
-                _batch = Batch(mini_batch, self.device, self.is_test)
+                _batch = Batch(mini_batch, self.device, self.is_test, vy_predict=self.args.vy_predict)
 
                 yield _batch
             return

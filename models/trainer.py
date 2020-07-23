@@ -399,7 +399,11 @@ class Trainer(object):
                             # logger.info('pred sent: %s' % (_pred))
                             pred.append(_pred)
                             gold.append(batch.tgt_str[i])
-                            origin.append(' '.join(batch.src_str[i]))
+                            _origin = ' '.join(batch.src_str[i])
+                            if self.args.vy_predict:
+                                doc_id = batch.doc_id
+                                _origin = str(doc_id[i]) + '\t' + _origin
+                            origin.append(_origin)
                         for i in range(len(gold)):
                             save_gold.write(gold[i].strip() + '\n')
                         for i in range(len(pred)):

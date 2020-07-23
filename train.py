@@ -340,6 +340,7 @@ if __name__ == '__main__':
     parser.add_argument("-block_trigram", type=str2bool, nargs='?', const=True, default=True)
 
     parser.add_argument("-shuffle_data", type=str2bool, nargs='?', const=True, default=False)
+    parser.add_argument("-vy_predict", type=str2bool, nargs='?', const=False, default=True)
 
     _args = parser.parse_args()
 

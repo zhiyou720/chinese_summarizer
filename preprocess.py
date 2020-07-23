@@ -45,18 +45,18 @@ if __name__ == '__main__':
                              'more accurate oracles but take much longer time.')
     parser.add_argument("-data_name", default='chinese_summary', help='vy_text')
     parser.add_argument("-oov_test", default=False)
-    parser.add_argument("-raw_path", default='./data/raw_data/merged.csv')
+    parser.add_argument("-raw_path", default='./data/raw_data/corpus.csv', help='./data/raw_data/merged.csv')
     parser.add_argument("-split_path", default='./data/split_data/')
     parser.add_argument("-tokenize_path", default='./data/tokenize_data/')
     parser.add_argument("-json_path", default='./data/json_data/')
     parser.add_argument("-map_path", default='./data/map_data/')
-    parser.add_argument("-bert_path", default='./data/bert_data/')
+    parser.add_argument("-bert_path", default='./data/predict_data/', help='./data/bert_data/')
     parser.add_argument("-oov_bert_path", default='./data/oov_data/')
 
     parser.add_argument("-shard_size", default=2000, type=int)
     parser.add_argument('-min_nsents', default=0, type=int)
     parser.add_argument('-max_nsents', default=150, type=int)
-    parser.add_argument('-min_src_ntokens', default=5, type=int)
+    parser.add_argument('-min_src_ntokens', default=0, type=int)
     parser.add_argument('-max_src_ntokens', default=200, type=int)
 
     parser.add_argument("-lower", type=str2bool, nargs='?', const=True, default=True)
@@ -66,6 +66,7 @@ if __name__ == '__main__':
     parser.add_argument('-dataset', default='', help='train, valid or test, defaul will process all datasets')
 
     parser.add_argument('-n_cpus', default=10, type=int)
+    parser.add_argument('-vy_predict', default=True, type=bool)
 
     _args = parser.parse_args()
     init_logger(_args.log_file)

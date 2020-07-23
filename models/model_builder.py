@@ -62,7 +62,7 @@ class Summarizer(nn.Module):
         self.bert = Bert(args.bert_pretrained_model_path, args.temp_dir, load_pretrained_bert, bert_config)
         if args.encoder == 'classifier':
             self.encoder = Classifier(self.bert.model.config.hidden_size)
-        # TODO: 加入了返回last status
+        # TODO: 加入了返回 sentence vector
         elif args.encoder == 'transformer':
             self.encoder = TransformerInterEncoder(self.bert.model.config.hidden_size, args.ff_size, args.heads,
                                                    args.dropout, args.inter_layers)
@@ -90,6 +90,7 @@ class Summarizer(nn.Module):
         self.load_state_dict(pt['models'], strict=True)
 
     def forward(self, x, segs, clss, mask, mask_cls, sentence_range=None):
+        # print(x[0], segs[0], mask[0])
         top_vec = self.bert(x, segs, mask)
         sents_vec = top_vec[torch.arange(top_vec.size(0)).unsqueeze(1), clss]
         sents_vec = sents_vec * mask_cls[:, :, None].float()
