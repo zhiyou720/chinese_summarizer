@@ -20,7 +20,7 @@ def merge_files(path_list, merge_path):
 def split_doc(data_path, out_path):
     data = load_txt_data(data_path)
     doc_index = 0
-    for i in tqdm(range(len(data[:5])), desc='split_doc'):
+    for i in tqdm(range(len(data)), desc='split_doc'):
         line = data[i].split(',')
         abstract = " ".join(line[0])
         from pyparsing import oneOf

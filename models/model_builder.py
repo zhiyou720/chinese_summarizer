@@ -95,5 +95,6 @@ class Summarizer(nn.Module):
         sents_vec = top_vec[torch.arange(top_vec.size(0)).unsqueeze(1), clss]
         sents_vec = sents_vec * mask_cls[:, :, None].float()
         sent_scores = self.encoder(sents_vec, mask_cls)[0].squeeze(-1)
-        last_status = self.encoder(sents_vec, mask_cls)[1]
-        return sent_scores, mask_cls, last_status
+        # TODO: last status
+        # last_status = self.encoder(sents_vec, mask_cls)[1]
+        return sent_scores, mask_cls

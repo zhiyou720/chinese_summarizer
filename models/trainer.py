@@ -137,6 +137,8 @@ class Trainer(object):
 
             reduce_counter = 0
             for i, batch in enumerate(train_iter):
+                # print(batch.src)
+                # print(len(batch))
                 if self.n_gpu == 0 or (i % self.n_gpu == self.gpu_rank):
 
                     true_batchs.append(batch)
@@ -145,19 +147,12 @@ class Trainer(object):
                     if accum == self.grad_accum_count:
                         reduce_counter += 1
                         if self.n_gpu > 1:
-                            normalization = sum(distributed
-                                                .all_gather_list
-                                                (normalization))
+                            normalization = sum(distributed.all_gather_list(normalization))
 
-                        self._gradient_accumulation(
-                            true_batchs, normalization, total_stats,
-                            report_stats)
+                        self._gradient_accumulation(true_batchs, normalization, total_stats, report_stats)
 
-                        report_stats = self._maybe_report_training(
-                            step, train_steps,
-                            self.optimizer.learning_rate,
-                            report_stats)
-
+                        report_stats = self._maybe_report_training(step, train_steps, self.optimizer.learning_rate,
+                                                                   report_stats)
                         true_batchs = []
                         accum = 0
                         normalization = 0
@@ -167,6 +162,7 @@ class Trainer(object):
                         step += 1
                         if step > train_steps:
                             break
+
             train_iter = train_iter_fct()
 
         return total_stats

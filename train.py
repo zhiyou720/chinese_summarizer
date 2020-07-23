@@ -291,7 +291,7 @@ if __name__ == '__main__':
     parser.add_argument("-encoder", default='transformer', type=str,
                         choices=['classifier', 'transformer', 'rnn', 'baseline'])
     parser.add_argument("-mode", default='train', type=str, choices=['train', 'validate', 'test', 'vector'])
-    parser.add_argument("-data_name", default='vy_textchinese_summary', help='vy_text')
+    parser.add_argument("-data_name", default='chinese_summary', help='vy_text')
     parser.add_argument("-bert_data_path", default='./data/bert_data/', help='./data/bert_data/')
     parser.add_argument("-model_path", default='./models/models_check_points/')
     parser.add_argument("-result_path", default='./results/')

@@ -7,6 +7,7 @@ import time
 from utils.logging import init_logger
 from utils.prepropress import data_builder
 from utils.format_data import split_doc, delete_data, merge_files
+from utils.dataio import load_txt_data
 
 
 def do_format_to_lines(args):
@@ -40,8 +41,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-mode", default='', type=str, help='format_to_lines or format_to_bert')
     parser.add_argument("-oracle_mode", default='greedy', type=str,
-                        help='how to generate oracle summaries, greedy or combination, combination will generate more '
-                             'accurate oracles but take much longer time.')
+                        help='how to generate oracle summaries, `greedy` or `combination`, combination will generate '
+                             'more accurate oracles but take much longer time.')
     parser.add_argument("-data_name", default='chinese_summary', help='vy_text')
     parser.add_argument("-oov_test", default=False)
     parser.add_argument("-raw_path", default='./data/raw_data/merged.csv')
@@ -53,7 +54,7 @@ if __name__ == '__main__':
     parser.add_argument("-oov_bert_path", default='./data/oov_data/')
 
     parser.add_argument("-shard_size", default=2000, type=int)
-    parser.add_argument('-min_nsents', default=3, type=int)
+    parser.add_argument('-min_nsents', default=0, type=int)
     parser.add_argument('-max_nsents', default=150, type=int)
     parser.add_argument('-min_src_ntokens', default=5, type=int)
     parser.add_argument('-max_src_ntokens', default=200, type=int)
@@ -65,6 +66,7 @@ if __name__ == '__main__':
     parser.add_argument('-dataset', default='', help='train, valid or test, defaul will process all datasets')
 
     parser.add_argument('-n_cpus', default=10, type=int)
+
 
     _args = parser.parse_args()
     init_logger(_args.log_file)
@@ -93,6 +95,7 @@ if __name__ == '__main__':
     # Remove all tokens files
     delete_data(_args.tokenize_path)
 
+
     # Format to bert data
     do_format_to_bert(_args)
     # Remove all json files
@@ -102,3 +105,21 @@ if __name__ == '__main__':
 
     # revers_index('./data/raw_data/oov_test.csv')
     # filter_data('./data/raw_data/oov_test.csv')
+
+    # import json
+    # with open('./data/json_data/chinese_summary.train.0.json', encoding='utf-8') as f:
+    #     data = f.read()
+    #     data = json.loads(data)
+    # print(type(data))
+    # for item in data[:1]:
+    #     # print(item)
+    #     # print(type(item))
+    #     for sub in item:
+    #         print(sub)
+    #         print(item[sub])
+    #         for ssub in item[sub]:
+    #             print(ssub)
+    # print(data[0])
+    # json_data_set = data_builder.tokenize_format_lines(_args)
+
+    # data_builder.format2bert(_args, json_data_set)

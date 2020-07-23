@@ -69,8 +69,10 @@ def batch(data, batch_size):
 
 
 def _lazy_dataset_loader(pt_file, corpus_type):
+    # print(pt_file)
     dataset = torch.load(pt_file)
     logger.info('Loading %s dataset from %s, number of examples: %d' % (corpus_type, pt_file, len(dataset)))
+    # print(dataset)
     return dataset
 
 
@@ -216,10 +218,11 @@ class DataIterator(object):
         """ Create batches """
         data = self.data()
         for buffer in self.batch_buffer(data, self.batch_size * 50):
-
+            # print(len(buffer))
             p_batch = sorted(buffer, key=lambda x: len(x[3]))  # size 357
-            p_batch = batch(p_batch, self.batch_size)  # size 51
-            p_batch = list(p_batch)
+            p_batch = batch(p_batch, self.batch_size)
+            p_batch = list(p_batch)  # size 51
+            # print(len(p_batch))
 
             # print(p_batch)
             # print(len(p_batch))
@@ -239,6 +242,7 @@ class DataIterator(object):
                     continue
                 self.iterations += 1
                 self._iterations_this_epoch += 1
+                # print(len(mini_batch))
                 if self.args.mode == 'test':  # TODO: predict
                     _batch = Batch(mini_batch, self.device, self.is_test)
                 else:
