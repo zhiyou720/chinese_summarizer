@@ -25128,3 +25128,380 @@
 [2020-07-23 18:19:03,272 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.849.bert.pt, number of examples: 1995
 [2020-07-23 18:19:10,288 INFO] Step 150/50000; xent: 2.20; lr: 0.0000004; 102 docs/s;     47 sec
 [2020-07-23 18:19:25,614 INFO] Step 200/50000; xent: 2.20; lr: 0.0000006; 104 docs/s;     62 sec
+[2020-07-23 18:19:41,189 INFO] Step 250/50000; xent: 2.14; lr: 0.0000007; 103 docs/s;     77 sec
+[2020-07-23 18:19:41,846 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.678.bert.pt, number of examples: 1996
+[2020-07-23 18:19:56,685 INFO] Step 300/50000; xent: 2.12; lr: 0.0000008;  99 docs/s;     93 sec
+[2020-07-23 18:20:11,933 INFO] Step 350/50000; xent: 2.11; lr: 0.0000010;  99 docs/s;    108 sec
+[2020-07-23 18:20:22,027 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.320.bert.pt, number of examples: 2001
+[2020-07-23 18:20:27,181 INFO] Step 400/50000; xent: 2.10; lr: 0.0000011; 101 docs/s;    123 sec
+[2020-07-23 18:20:42,295 INFO] Step 450/50000; xent: 2.06; lr: 0.0000013; 102 docs/s;    139 sec
+[2020-07-23 18:20:57,784 INFO] Step 500/50000; xent: 2.07; lr: 0.0000014; 101 docs/s;    154 sec
+[2020-07-23 18:21:01,477 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.983.bert.pt, number of examples: 2000
+[2020-07-23 18:21:13,129 INFO] Step 550/50000; xent: 2.18; lr: 0.0000015; 100 docs/s;    169 sec
+[2020-07-23 18:21:28,526 INFO] Step 600/50000; xent: 2.17; lr: 0.0000017; 100 docs/s;    185 sec
+[2020-07-23 18:21:41,946 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.206.bert.pt, number of examples: 1997
+[2020-07-23 18:21:44,435 INFO] Step 650/50000; xent: 2.17; lr: 0.0000018;  96 docs/s;    201 sec
+[2020-07-23 18:21:59,879 INFO] Step 700/50000; xent: 2.16; lr: 0.0000020; 102 docs/s;    216 sec
+[2020-07-23 18:22:15,086 INFO] Step 750/50000; xent: 2.22; lr: 0.0000021; 102 docs/s;    231 sec
+[2020-07-23 18:22:21,233 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.412.bert.pt, number of examples: 1992
+[2020-07-23 18:22:30,405 INFO] Step 800/50000; xent: 2.16; lr: 0.0000022; 102 docs/s;    247 sec
+[2020-07-23 18:22:45,755 INFO] Step 850/50000; xent: 2.13; lr: 0.0000024; 100 docs/s;    262 sec
+[2020-07-23 18:23:00,509 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.314.bert.pt, number of examples: 1995
+[2020-07-23 18:23:01,123 INFO] Step 900/50000; xent: 2.15; lr: 0.0000025; 102 docs/s;    277 sec
+[2020-07-23 18:23:16,536 INFO] Step 950/50000; xent: 2.12; lr: 0.0000027; 102 docs/s;    293 sec
+[2020-07-23 18:23:32,282 INFO] Step 1000/50000; xent: 2.11; lr: 0.0000028; 101 docs/s;    309 sec
+[2020-07-23 18:23:39,862 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.982.bert.pt, number of examples: 1993
+[2020-07-23 18:23:47,592 INFO] Step 1050/50000; xent: 2.11; lr: 0.0000029; 102 docs/s;    324 sec
+[2020-07-23 18:24:02,776 INFO] Step 1100/50000; xent: 2.12; lr: 0.0000031; 102 docs/s;    339 sec
+[2020-07-23 18:24:18,191 INFO] Step 1150/50000; xent: 2.21; lr: 0.0000032; 101 docs/s;    354 sec
+[2020-07-23 18:24:19,175 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.346.bert.pt, number of examples: 1994
+[2020-07-23 18:24:33,691 INFO] Step 1200/50000; xent: 2.06; lr: 0.0000034; 100 docs/s;    370 sec
+[2020-07-23 18:24:49,088 INFO] Step 1250/50000; xent: 2.12; lr: 0.0000035; 100 docs/s;    385 sec
+[2020-07-23 18:24:58,876 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.325.bert.pt, number of examples: 1994
+[2020-07-23 18:25:04,379 INFO] Step 1300/50000; xent: 2.07; lr: 0.0000036; 102 docs/s;    401 sec
+[2020-07-23 18:25:19,590 INFO] Step 1350/50000; xent: 2.04; lr: 0.0000038; 104 docs/s;    416 sec
+[2020-07-23 18:25:35,113 INFO] Step 1400/50000; xent: 2.04; lr: 0.0000039; 102 docs/s;    431 sec
+[2020-07-23 18:25:37,704 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.732.bert.pt, number of examples: 1985
+[2020-07-23 18:25:50,713 INFO] Step 1450/50000; xent: 2.10; lr: 0.0000041;  99 docs/s;    447 sec
+[2020-07-23 18:26:05,964 INFO] Step 1500/50000; xent: 2.08; lr: 0.0000042; 103 docs/s;    462 sec
+[2020-07-23 18:26:17,236 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.871.bert.pt, number of examples: 1999
+[2020-07-23 18:26:21,615 INFO] Step 1550/50000; xent: 2.07; lr: 0.0000043; 100 docs/s;    478 sec
+[2020-07-23 18:26:37,228 INFO] Step 1600/50000; xent: 1.96; lr: 0.0000045; 102 docs/s;    493 sec
+[2020-07-23 18:26:52,761 INFO] Step 1650/50000; xent: 1.95; lr: 0.0000046; 104 docs/s;    509 sec
+[2020-07-23 18:26:55,870 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.860.bert.pt, number of examples: 2000
+[2020-07-23 18:27:08,121 INFO] Step 1700/50000; xent: 2.04; lr: 0.0000048; 103 docs/s;    524 sec
+[2020-07-23 18:27:23,572 INFO] Step 1750/50000; xent: 1.95; lr: 0.0000049; 103 docs/s;    540 sec
+[2020-07-23 18:27:34,788 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.427.bert.pt, number of examples: 1988
+[2020-07-23 18:27:39,056 INFO] Step 1800/50000; xent: 1.98; lr: 0.0000050; 102 docs/s;    555 sec
+[2020-07-23 18:27:54,438 INFO] Step 1850/50000; xent: 2.09; lr: 0.0000052;  97 docs/s;    571 sec
+[2020-07-23 18:28:09,945 INFO] Step 1900/50000; xent: 2.09; lr: 0.0000053;  99 docs/s;    586 sec
+[2020-07-23 18:28:15,181 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.173.bert.pt, number of examples: 1998
+[2020-07-23 18:28:25,231 INFO] Step 1950/50000; xent: 2.10; lr: 0.0000055; 100 docs/s;    601 sec
+[2020-07-23 18:28:40,906 INFO] Step 2000/50000; xent: 2.06; lr: 0.0000056;  99 docs/s;    617 sec
+[2020-07-23 18:28:55,400 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.707.bert.pt, number of examples: 1999
+[2020-07-23 18:28:56,328 INFO] Step 2050/50000; xent: 2.04; lr: 0.0000057;  99 docs/s;    633 sec
+[2020-07-23 18:29:11,793 INFO] Step 2100/50000; xent: 2.17; lr: 0.0000059; 101 docs/s;    648 sec
+[2020-07-23 18:29:27,060 INFO] Step 2150/50000; xent: 2.14; lr: 0.0000060; 103 docs/s;    663 sec
+[2020-07-23 18:29:34,439 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.647.bert.pt, number of examples: 1998
+[2020-07-23 18:29:42,446 INFO] Step 2200/50000; xent: 2.08; lr: 0.0000061; 102 docs/s;    679 sec
+[2020-07-23 18:29:57,868 INFO] Step 2250/50000; xent: 2.00; lr: 0.0000063; 101 docs/s;    694 sec
+[2020-07-23 18:30:13,169 INFO] Step 2300/50000; xent: 2.07; lr: 0.0000064; 100 docs/s;    709 sec
+[2020-07-23 18:30:14,127 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.171.bert.pt, number of examples: 2000
+[2020-07-23 18:30:28,599 INFO] Step 2350/50000; xent: 2.02; lr: 0.0000066; 101 docs/s;    725 sec
+[2020-07-23 18:30:44,027 INFO] Step 2400/50000; xent: 2.03; lr: 0.0000067; 102 docs/s;    740 sec
+[2020-07-23 18:30:53,268 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.690.bert.pt, number of examples: 1992
+[2020-07-23 18:30:59,356 INFO] Step 2450/50000; xent: 1.99; lr: 0.0000068; 100 docs/s;    756 sec
+[2020-07-23 18:31:14,776 INFO] Step 2500/50000; xent: 1.97; lr: 0.0000070;  99 docs/s;    771 sec
+[2020-07-23 18:31:30,005 INFO] Step 2550/50000; xent: 1.98; lr: 0.0000071; 100 docs/s;    786 sec
+[2020-07-23 18:31:33,397 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.68.bert.pt, number of examples: 1996
+[2020-07-23 18:31:45,557 INFO] Step 2600/50000; xent: 2.07; lr: 0.0000073; 100 docs/s;    802 sec
+[2020-07-23 18:32:01,017 INFO] Step 2650/50000; xent: 2.06; lr: 0.0000074; 102 docs/s;    817 sec
+[2020-07-23 18:32:13,080 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.339.bert.pt, number of examples: 1998
+[2020-07-23 18:32:16,432 INFO] Step 2700/50000; xent: 2.00; lr: 0.0000075; 100 docs/s;    833 sec
+[2020-07-23 18:32:31,950 INFO] Step 2750/50000; xent: 2.07; lr: 0.0000077;  99 docs/s;    848 sec
+[2020-07-23 18:32:47,360 INFO] Step 2800/50000; xent: 2.03; lr: 0.0000078;  99 docs/s;    864 sec
+[2020-07-23 18:32:53,497 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.646.bert.pt, number of examples: 1993
+[2020-07-23 18:33:02,683 INFO] Step 2850/50000; xent: 2.17; lr: 0.0000080;  98 docs/s;    879 sec
+[2020-07-23 18:33:18,006 INFO] Step 2900/50000; xent: 2.05; lr: 0.0000081;  99 docs/s;    894 sec
+[2020-07-23 18:33:33,187 INFO] Step 2950/50000; xent: 2.15; lr: 0.0000082;  97 docs/s;    909 sec
+[2020-07-23 18:33:34,137 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.47.bert.pt, number of examples: 1995
+[2020-07-23 18:33:48,538 INFO] Step 3000/50000; xent: 2.05; lr: 0.0000084; 102 docs/s;    925 sec
+[2020-07-23 18:34:03,785 INFO] Step 3050/50000; xent: 2.04; lr: 0.0000085; 103 docs/s;    940 sec
+[2020-07-23 18:34:13,234 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.616.bert.pt, number of examples: 1998
+[2020-07-23 18:34:18,930 INFO] Step 3100/50000; xent: 2.07; lr: 0.0000087; 102 docs/s;    955 sec
+[2020-07-23 18:34:34,307 INFO] Step 3150/50000; xent: 2.16; lr: 0.0000088;  99 docs/s;    971 sec
+[2020-07-23 18:34:49,782 INFO] Step 3200/50000; xent: 2.20; lr: 0.0000089; 100 docs/s;    986 sec
+[2020-07-23 18:34:53,107 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.989.bert.pt, number of examples: 1999
+[2020-07-23 18:35:04,981 INFO] Step 3250/50000; xent: 2.04; lr: 0.0000091; 104 docs/s;   1001 sec
+[2020-07-23 18:35:20,178 INFO] Step 3300/50000; xent: 2.05; lr: 0.0000092; 102 docs/s;   1016 sec
+[2020-07-23 18:35:31,461 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.130.bert.pt, number of examples: 1996
+[2020-07-23 18:35:35,384 INFO] Step 3350/50000; xent: 1.96; lr: 0.0000094; 104 docs/s;   1032 sec
+[2020-07-23 18:35:50,604 INFO] Step 3400/50000; xent: 2.00; lr: 0.0000095; 103 docs/s;   1047 sec
+[2020-07-23 18:36:05,805 INFO] Step 3450/50000; xent: 1.93; lr: 0.0000096; 104 docs/s;   1062 sec
+[2020-07-23 18:36:10,328 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.66.bert.pt, number of examples: 2001
+[2020-07-23 18:36:20,946 INFO] Step 3500/50000; xent: 1.93; lr: 0.0000098; 105 docs/s;   1077 sec
+[2020-07-23 18:36:36,060 INFO] Step 3550/50000; xent: 1.98; lr: 0.0000099; 103 docs/s;   1092 sec
+[2020-07-23 18:36:48,749 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.865.bert.pt, number of examples: 1996
+[2020-07-23 18:36:51,173 INFO] Step 3600/50000; xent: 2.02; lr: 0.0000101; 104 docs/s;   1107 sec
+[2020-07-23 18:37:06,283 INFO] Step 3650/50000; xent: 2.00; lr: 0.0000102; 102 docs/s;   1123 sec
+[2020-07-23 18:37:21,458 INFO] Step 3700/50000; xent: 1.95; lr: 0.0000103; 103 docs/s;   1138 sec
+[2020-07-23 18:37:27,546 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.884.bert.pt, number of examples: 1995
+[2020-07-23 18:37:36,704 INFO] Step 3750/50000; xent: 1.84; lr: 0.0000105; 103 docs/s;   1153 sec
+[2020-07-23 18:37:51,900 INFO] Step 3800/50000; xent: 1.77; lr: 0.0000106; 104 docs/s;   1168 sec
+[2020-07-23 18:38:06,171 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.42.bert.pt, number of examples: 1998
+[2020-07-23 18:38:07,086 INFO] Step 3850/50000; xent: 1.70; lr: 0.0000108; 103 docs/s;   1183 sec
+[2020-07-23 18:38:22,344 INFO] Step 3900/50000; xent: 1.69; lr: 0.0000109; 101 docs/s;   1199 sec
+[2020-07-23 18:38:37,579 INFO] Step 3950/50000; xent: 1.65; lr: 0.0000110; 101 docs/s;   1214 sec
+[2020-07-23 18:38:45,754 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.129.bert.pt, number of examples: 1992
+[2020-07-23 18:38:52,672 INFO] Step 4000/50000; xent: 1.66; lr: 0.0000112; 102 docs/s;   1229 sec
+[2020-07-23 18:39:07,847 INFO] Step 4050/50000; xent: 1.62; lr: 0.0000113; 105 docs/s;   1244 sec
+[2020-07-23 18:39:23,054 INFO] Step 4100/50000; xent: 1.61; lr: 0.0000115; 103 docs/s;   1259 sec
+[2020-07-23 18:39:24,027 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.94.bert.pt, number of examples: 1998
+[2020-07-23 18:39:38,376 INFO] Step 4150/50000; xent: 1.60; lr: 0.0000116; 102 docs/s;   1275 sec
+[2020-07-23 18:39:53,539 INFO] Step 4200/50000; xent: 1.67; lr: 0.0000117; 103 docs/s;   1290 sec
+[2020-07-23 18:40:03,219 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.198.bert.pt, number of examples: 1998
+[2020-07-23 18:40:09,095 INFO] Step 4250/50000; xent: 1.62; lr: 0.0000119; 100 docs/s;   1305 sec
+[2020-07-23 18:40:24,466 INFO] Step 4300/50000; xent: 1.71; lr: 0.0000120; 101 docs/s;   1321 sec
+[2020-07-23 18:40:39,670 INFO] Step 4350/50000; xent: 1.73; lr: 0.0000122; 102 docs/s;   1336 sec
+[2020-07-23 18:40:42,746 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.775.bert.pt, number of examples: 2001
+[2020-07-23 18:40:54,979 INFO] Step 4400/50000; xent: 1.79; lr: 0.0000123; 102 docs/s;   1351 sec
+[2020-07-23 18:41:10,157 INFO] Step 4450/50000; xent: 1.86; lr: 0.0000124; 101 docs/s;   1366 sec
+[2020-07-23 18:41:22,035 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.903.bert.pt, number of examples: 1996
+[2020-07-23 18:41:25,328 INFO] Step 4500/50000; xent: 1.82; lr: 0.0000126; 101 docs/s;   1382 sec
+[2020-07-23 18:41:40,557 INFO] Step 4550/50000; xent: 1.77; lr: 0.0000127; 101 docs/s;   1397 sec
+[2020-07-23 18:41:55,767 INFO] Step 4600/50000; xent: 1.74; lr: 0.0000129; 102 docs/s;   1412 sec
+[2020-07-23 18:42:01,604 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.504.bert.pt, number of examples: 1982
+[2020-07-23 18:42:11,106 INFO] Step 4650/50000; xent: 1.73; lr: 0.0000130;  98 docs/s;   1427 sec
+[2020-07-23 18:42:26,267 INFO] Step 4700/50000; xent: 1.42; lr: 0.0000131;  99 docs/s;   1442 sec
+[2020-07-23 18:42:41,450 INFO] Step 4750/50000; xent: 1.48; lr: 0.0000133;  96 docs/s;   1458 sec
+[2020-07-23 18:42:42,407 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.803.bert.pt, number of examples: 1999
+[2020-07-23 18:42:56,650 INFO] Step 4800/50000; xent: 1.65; lr: 0.0000134; 102 docs/s;   1473 sec
+[2020-07-23 18:43:11,802 INFO] Step 4850/50000; xent: 1.62; lr: 0.0000136; 102 docs/s;   1488 sec
+[2020-07-23 18:43:21,590 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.127.bert.pt, number of examples: 1998
+[2020-07-23 18:43:27,177 INFO] Step 4900/50000; xent: 1.62; lr: 0.0000137; 101 docs/s;   1503 sec
+[2020-07-23 18:43:42,318 INFO] Step 4950/50000; xent: 1.53; lr: 0.0000138; 102 docs/s;   1519 sec
+[2020-07-23 18:43:57,351 INFO] Step 5000/50000; xent: 1.53; lr: 0.0000140; 102 docs/s;   1534 sec
+[2020-07-23 18:43:57,352 INFO] Saving checkpoint ./models/models_check_points/model_step_5000.pt
+[2020-07-23 18:44:01,533 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.457.bert.pt, number of examples: 1996
+[2020-07-23 18:44:13,415 INFO] Step 5050/50000; xent: 1.58; lr: 0.0000141;  99 docs/s;   1550 sec
+[2020-07-23 18:44:28,626 INFO] Step 5100/50000; xent: 1.55; lr: 0.0000143; 105 docs/s;   1565 sec
+[2020-07-23 18:44:39,376 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.835.bert.pt, number of examples: 1990
+[2020-07-23 18:44:43,918 INFO] Step 5150/50000; xent: 1.58; lr: 0.0000144; 106 docs/s;   1580 sec
+[2020-07-23 18:44:59,270 INFO] Step 5200/50000; xent: 1.69; lr: 0.0000145; 101 docs/s;   1595 sec
+[2020-07-23 18:45:14,724 INFO] Step 5250/50000; xent: 1.72; lr: 0.0000147; 100 docs/s;   1611 sec
+[2020-07-23 18:45:18,838 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.240.bert.pt, number of examples: 1997
+[2020-07-23 18:45:30,314 INFO] Step 5300/50000; xent: 1.69; lr: 0.0000148;  98 docs/s;   1627 sec
+[2020-07-23 18:45:46,041 INFO] Step 5350/50000; xent: 1.68; lr: 0.0000150;  97 docs/s;   1642 sec
+[2020-07-23 18:46:00,169 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.461.bert.pt, number of examples: 1994
+[2020-07-23 18:46:01,700 INFO] Step 5400/50000; xent: 1.63; lr: 0.0000151;  97 docs/s;   1658 sec
+[2020-07-23 18:46:17,518 INFO] Step 5450/50000; xent: 1.64; lr: 0.0000152; 101 docs/s;   1674 sec
+[2020-07-23 18:46:33,310 INFO] Step 5500/50000; xent: 1.63; lr: 0.0000154; 101 docs/s;   1690 sec
+[2020-07-23 18:46:39,694 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.729.bert.pt, number of examples: 1995
+[2020-07-23 18:46:48,924 INFO] Step 5550/50000; xent: 1.75; lr: 0.0000155;  99 docs/s;   1705 sec
+[2020-07-23 18:47:04,451 INFO] Step 5600/50000; xent: 1.80; lr: 0.0000157; 100 docs/s;   1721 sec
+[2020-07-23 18:47:19,668 INFO] Step 5650/50000; xent: 1.85; lr: 0.0000158; 101 docs/s;   1736 sec
+[2020-07-23 18:47:19,722 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.820.bert.pt, number of examples: 2001
+[2020-07-23 18:47:34,914 INFO] Step 5700/50000; xent: 1.70; lr: 0.0000159; 101 docs/s;   1751 sec
+[2020-07-23 18:47:50,174 INFO] Step 5750/50000; xent: 1.63; lr: 0.0000161; 103 docs/s;   1766 sec
+[2020-07-23 18:47:59,052 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.738.bert.pt, number of examples: 1990
+[2020-07-23 18:48:05,451 INFO] Step 5800/50000; xent: 1.55; lr: 0.0000162; 102 docs/s;   1782 sec
+[2020-07-23 18:48:20,573 INFO] Step 5850/50000; xent: 1.46; lr: 0.0000164; 104 docs/s;   1797 sec
+[2020-07-23 18:48:35,702 INFO] Step 5900/50000; xent: 1.45; lr: 0.0000165; 103 docs/s;   1812 sec
+[2020-07-23 18:48:37,812 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.277.bert.pt, number of examples: 1998
+[2020-07-23 18:48:50,914 INFO] Step 5950/50000; xent: 1.48; lr: 0.0000166; 102 docs/s;   1827 sec
+[2020-07-23 18:49:06,131 INFO] Step 6000/50000; xent: 1.49; lr: 0.0000168; 103 docs/s;   1842 sec
+[2020-07-23 18:49:16,526 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.977.bert.pt, number of examples: 1997
+[2020-07-23 18:49:21,430 INFO] Step 6050/50000; xent: 1.55; lr: 0.0000169; 103 docs/s;   1858 sec
+[2020-07-23 18:49:36,658 INFO] Step 6100/50000; xent: 1.59; lr: 0.0000171; 104 docs/s;   1873 sec
+[2020-07-23 18:49:51,899 INFO] Step 6150/50000; xent: 1.63; lr: 0.0000172; 103 docs/s;   1888 sec
+[2020-07-23 18:49:55,312 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.943.bert.pt, number of examples: 1991
+[2020-07-23 18:50:07,250 INFO] Step 6200/50000; xent: 1.58; lr: 0.0000173; 101 docs/s;   1903 sec
+[2020-07-23 18:50:22,520 INFO] Step 6250/50000; xent: 1.66; lr: 0.0000175; 102 docs/s;   1919 sec
+[2020-07-23 18:50:34,724 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.769.bert.pt, number of examples: 1996
+[2020-07-23 18:50:37,769 INFO] Step 6300/50000; xent: 1.62; lr: 0.0000176; 102 docs/s;   1934 sec
+[2020-07-23 18:50:53,235 INFO] Step 6350/50000; xent: 1.78; lr: 0.0000177; 101 docs/s;   1949 sec
+[2020-07-23 18:51:08,979 INFO] Step 6400/50000; xent: 1.76; lr: 0.0000179;  99 docs/s;   1965 sec
+[2020-07-23 18:51:14,514 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.777.bert.pt, number of examples: 1997
+[2020-07-23 18:51:24,335 INFO] Step 6450/50000; xent: 1.79; lr: 0.0000180; 102 docs/s;   1981 sec
+[2020-07-23 18:51:39,717 INFO] Step 6500/50000; xent: 1.73; lr: 0.0000182; 102 docs/s;   1996 sec
+[2020-07-23 18:51:53,589 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.966.bert.pt, number of examples: 1998
+[2020-07-23 18:51:55,142 INFO] Step 6550/50000; xent: 1.79; lr: 0.0000183; 102 docs/s;   2011 sec
+[2020-07-23 18:52:10,687 INFO] Step 6600/50000; xent: 1.46; lr: 0.0000184;  99 docs/s;   2027 sec
+[2020-07-23 18:52:26,712 INFO] Step 6650/50000; xent: 1.44; lr: 0.0000186;  97 docs/s;   2043 sec
+[2020-07-23 18:52:34,055 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.895.bert.pt, number of examples: 1994
+[2020-07-23 18:52:42,645 INFO] Step 6700/50000; xent: 1.47; lr: 0.0000187; 100 docs/s;   2059 sec
+[2020-07-23 18:52:58,770 INFO] Step 6750/50000; xent: 1.56; lr: 0.0000189;  96 docs/s;   2075 sec
+[2020-07-23 18:53:14,971 INFO] Step 6800/50000; xent: 1.51; lr: 0.0000190;  97 docs/s;   2091 sec
+[2020-07-23 18:53:15,031 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.673.bert.pt, number of examples: 1994
+[2020-07-23 18:53:31,728 INFO] Step 6850/50000; xent: 1.58; lr: 0.0000191;  91 docs/s;   2108 sec
+[2020-07-23 18:53:47,976 INFO] Step 6900/50000; xent: 1.58; lr: 0.0000193;  92 docs/s;   2124 sec
+[2020-07-23 18:53:58,508 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.937.bert.pt, number of examples: 1995
+[2020-07-23 18:54:04,444 INFO] Step 6950/50000; xent: 1.57; lr: 0.0000194;  93 docs/s;   2141 sec
+[2020-07-23 18:54:20,754 INFO] Step 7000/50000; xent: 1.58; lr: 0.0000196;  96 docs/s;   2157 sec
+[2020-07-23 18:54:37,154 INFO] Step 7050/50000; xent: 1.60; lr: 0.0000197;  94 docs/s;   2173 sec
+[2020-07-23 18:54:40,406 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.914.bert.pt, number of examples: 1991
+[2020-07-23 18:54:53,669 INFO] Step 7100/50000; xent: 1.72; lr: 0.0000198;  93 docs/s;   2190 sec
+[2020-07-23 18:55:10,364 INFO] Step 7150/50000; xent: 1.76; lr: 0.0000200;  92 docs/s;   2207 sec
+[2020-07-23 18:55:23,415 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.844.bert.pt, number of examples: 1992
+[2020-07-23 18:55:26,664 INFO] Step 7200/50000; xent: 1.74; lr: 0.0000201;  96 docs/s;   2223 sec
+[2020-07-23 18:55:42,944 INFO] Step 7250/50000; xent: 1.77; lr: 0.0000203;  99 docs/s;   2239 sec
+[2020-07-23 18:55:59,298 INFO] Step 7300/50000; xent: 1.71; lr: 0.0000204;  97 docs/s;   2256 sec
+[2020-07-23 18:56:04,108 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.429.bert.pt, number of examples: 1975
+[2020-07-23 18:56:15,385 INFO] Step 7350/50000; xent: 1.68; lr: 0.0000205;  95 docs/s;   2272 sec
+[2020-07-23 18:56:31,492 INFO] Step 7400/50000; xent: 1.68; lr: 0.0000207;  95 docs/s;   2288 sec
+[2020-07-23 18:56:45,694 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.5.bert.pt, number of examples: 1997
+[2020-07-23 18:56:47,606 INFO] Step 7450/50000; xent: 1.63; lr: 0.0000208;  95 docs/s;   2304 sec
+[2020-07-23 18:57:03,712 INFO] Step 7500/50000; xent: 1.57; lr: 0.0000210;  97 docs/s;   2320 sec
+[2020-07-23 18:57:20,083 INFO] Step 7550/50000; xent: 1.68; lr: 0.0000211;  91 docs/s;   2336 sec
+[2020-07-23 18:57:27,984 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.973.bert.pt, number of examples: 1992
+[2020-07-23 18:57:36,363 INFO] Step 7600/50000; xent: 1.62; lr: 0.0000212;  96 docs/s;   2353 sec
+[2020-07-23 18:57:52,787 INFO] Step 7650/50000; xent: 1.53; lr: 0.0000214;  96 docs/s;   2369 sec
+[2020-07-23 18:58:09,262 INFO] Step 7700/50000; xent: 1.60; lr: 0.0000215;  95 docs/s;   2385 sec
+[2020-07-23 18:58:09,655 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.963.bert.pt, number of examples: 1997
+[2020-07-23 18:58:25,594 INFO] Step 7750/50000; xent: 1.54; lr: 0.0000217;  96 docs/s;   2402 sec
+[2020-07-23 18:58:41,990 INFO] Step 7800/50000; xent: 1.49; lr: 0.0000218;  96 docs/s;   2418 sec
+[2020-07-23 18:58:51,025 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.667.bert.pt, number of examples: 1996
+[2020-07-23 18:58:58,057 INFO] Step 7850/50000; xent: 1.54; lr: 0.0000219;  95 docs/s;   2434 sec
+[2020-07-23 18:59:14,296 INFO] Step 7900/50000; xent: 1.75; lr: 0.0000221;  94 docs/s;   2451 sec
+[2020-07-23 18:59:30,672 INFO] Step 7950/50000; xent: 1.68; lr: 0.0000222;  91 docs/s;   2467 sec
+[2020-07-23 18:59:34,282 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.300.bert.pt, number of examples: 1994
+[2020-07-23 18:59:47,010 INFO] Step 8000/50000; xent: 1.65; lr: 0.0000224;  95 docs/s;   2483 sec
+[2020-07-23 19:00:03,490 INFO] Step 8050/50000; xent: 1.57; lr: 0.0000223;  95 docs/s;   2500 sec
+[2020-07-23 19:00:16,146 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.286.bert.pt, number of examples: 1989
+[2020-07-23 19:00:20,078 INFO] Step 8100/50000; xent: 1.60; lr: 0.0000222;  95 docs/s;   2516 sec
+[2020-07-23 19:00:36,455 INFO] Step 8150/50000; xent: 1.63; lr: 0.0000222;  96 docs/s;   2533 sec
+[2020-07-23 19:00:52,634 INFO] Step 8200/50000; xent: 1.60; lr: 0.0000221;  97 docs/s;   2549 sec
+[2020-07-23 19:00:57,461 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.333.bert.pt, number of examples: 1996
+[2020-07-23 19:01:08,645 INFO] Step 8250/50000; xent: 1.64; lr: 0.0000220;  96 docs/s;   2565 sec
+[2020-07-23 19:01:24,726 INFO] Step 8300/50000; xent: 1.59; lr: 0.0000220;  97 docs/s;   2581 sec
+[2020-07-23 19:01:38,834 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.812.bert.pt, number of examples: 1998
+[2020-07-23 19:01:40,705 INFO] Step 8350/50000; xent: 1.61; lr: 0.0000219;  96 docs/s;   2597 sec
+[2020-07-23 19:01:57,039 INFO] Step 8400/50000; xent: 1.55; lr: 0.0000218;  95 docs/s;   2613 sec
+[2020-07-23 19:02:10,267 INFO] Device ID 0
+[2020-07-23 19:02:10,267 INFO] Device cuda
+[2020-07-23 19:02:10,282 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-23 19:02:13,182 INFO] Step 8450/50000; xent: 1.47; lr: 0.0000218;  96 docs/s;   2629 sec
+[2020-07-23 19:02:18,953 INFO] Device ID 0
+[2020-07-23 19:02:18,953 INFO] Device cuda
+[2020-07-23 19:02:18,967 INFO] Loading checkpoint from ./models/models_check_points/model_step_5000.pt
+[2020-07-23 19:02:21,154 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.600.bert.pt, number of examples: 2000
+[2020-07-23 19:02:29,572 INFO] Step 8500/50000; xent: 1.56; lr: 0.0000217;  94 docs/s;   2646 sec
+[2020-07-23 19:02:45,807 INFO] Step 8550/50000; xent: 1.54; lr: 0.0000216;  94 docs/s;   2662 sec
+[2020-07-23 19:03:02,032 INFO] Step 8600/50000; xent: 1.60; lr: 0.0000216;  93 docs/s;   2678 sec
+[2020-07-23 19:03:03,767 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.990.bert.pt, number of examples: 1436
+[2020-07-23 19:03:18,763 INFO] Step 8650/50000; xent: 1.64; lr: 0.0000215;  93 docs/s;   2695 sec
+[2020-07-23 19:03:34,242 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.493.bert.pt, number of examples: 2001
+[2020-07-23 19:03:35,183 INFO] Step 8700/50000; xent: 1.67; lr: 0.0000214;  95 docs/s;   2711 sec
+[2020-07-23 19:03:51,536 INFO] Step 8750/50000; xent: 1.57; lr: 0.0000214;  94 docs/s;   2728 sec
+[2020-07-23 19:04:07,575 INFO] Step 8800/50000; xent: 1.53; lr: 0.0000213;  97 docs/s;   2744 sec
+[2020-07-23 19:04:15,864 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.567.bert.pt, number of examples: 1995
+[2020-07-23 19:04:23,468 INFO] Step 8850/50000; xent: 1.56; lr: 0.0000213; 100 docs/s;   2760 sec
+[2020-07-23 19:04:39,433 INFO] Step 8900/50000; xent: 1.58; lr: 0.0000212;  98 docs/s;   2776 sec
+[2020-07-23 19:04:55,450 INFO] Step 8950/50000; xent: 1.69; lr: 0.0000211;  97 docs/s;   2792 sec
+[2020-07-23 19:04:56,464 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.408.bert.pt, number of examples: 1995
+[2020-07-23 19:05:11,482 INFO] Step 9000/50000; xent: 1.67; lr: 0.0000211;  98 docs/s;   2808 sec
+[2020-07-23 19:05:27,508 INFO] Step 9050/50000; xent: 1.63; lr: 0.0000210;  98 docs/s;   2824 sec
+[2020-07-23 19:05:37,334 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.272.bert.pt, number of examples: 1998
+[2020-07-23 19:05:43,778 INFO] Step 9100/50000; xent: 1.68; lr: 0.0000210;  97 docs/s;   2840 sec
+[2020-07-23 19:05:59,912 INFO] Step 9150/50000; xent: 1.67; lr: 0.0000209;  97 docs/s;   2856 sec
+[2020-07-23 19:06:15,782 INFO] Step 9200/50000; xent: 1.69; lr: 0.0000209;  97 docs/s;   2872 sec
+[2020-07-23 19:06:18,468 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.120.bert.pt, number of examples: 1999
+[2020-07-23 19:06:32,058 INFO] Step 9250/50000; xent: 1.64; lr: 0.0000208;  97 docs/s;   2888 sec
+[2020-07-23 19:06:48,018 INFO] Step 9300/50000; xent: 1.54; lr: 0.0000207;  98 docs/s;   2904 sec
+[2020-07-23 19:06:59,250 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.629.bert.pt, number of examples: 1999
+[2020-07-23 19:07:04,088 INFO] Step 9350/50000; xent: 1.70; lr: 0.0000207;  98 docs/s;   2920 sec
+[2020-07-23 19:07:20,416 INFO] Step 9400/50000; xent: 1.66; lr: 0.0000206;  97 docs/s;   2937 sec
+[2020-07-23 19:07:36,523 INFO] Step 9450/50000; xent: 1.66; lr: 0.0000206;  98 docs/s;   2953 sec
+[2020-07-23 19:07:40,365 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.316.bert.pt, number of examples: 1995
+[2020-07-23 19:07:52,377 INFO] Step 9500/50000; xent: 1.58; lr: 0.0000205;  99 docs/s;   2969 sec
+[2020-07-23 19:08:08,335 INFO] Step 9550/50000; xent: 1.56; lr: 0.0000205;  99 docs/s;   2985 sec
+[2020-07-23 19:08:20,579 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.915.bert.pt, number of examples: 2000
+[2020-07-23 19:08:24,428 INFO] Step 9600/50000; xent: 1.61; lr: 0.0000204;  98 docs/s;   3001 sec
+[2020-07-23 19:08:40,235 INFO] Step 9650/50000; xent: 1.87; lr: 0.0000204;  96 docs/s;   3016 sec
+[2020-07-23 19:08:56,198 INFO] Step 9700/50000; xent: 1.77; lr: 0.0000203;  96 docs/s;   3032 sec
+[2020-07-23 19:09:02,265 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.734.bert.pt, number of examples: 1976
+[2020-07-23 19:09:12,121 INFO] Step 9750/50000; xent: 1.71; lr: 0.0000203;  96 docs/s;   3048 sec
+[2020-07-23 19:09:15,838 INFO] Device ID 0
+[2020-07-23 19:09:15,838 INFO] Device cuda
+[2020-07-23 19:09:15,852 INFO] Loading checkpoint from ./models/models_check_points/model_step_5000.pt
+[2020-07-23 19:09:28,290 INFO] Step 9800/50000; xent: 1.67; lr: 0.0000202;  96 docs/s;   3065 sec
+[2020-07-23 19:09:42,838 INFO] Device ID 0
+[2020-07-23 19:09:42,838 INFO] Device cuda
+[2020-07-23 19:09:42,852 INFO] Loading checkpoint from ./models/models_check_points/model_step_5000.pt
+[2020-07-23 19:09:43,189 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.164.bert.pt, number of examples: 1997
+[2020-07-23 19:09:44,511 INFO] Step 9850/50000; xent: 1.64; lr: 0.0000202;  96 docs/s;   3081 sec
+[2020-07-23 19:10:00,574 INFO] Device ID 0
+[2020-07-23 19:10:00,575 INFO] Device cuda
+[2020-07-23 19:10:00,589 INFO] Loading checkpoint from ./models/models_check_points/model_step_5000.pt
+[2020-07-23 19:10:00,803 INFO] Step 9900/50000; xent: 1.59; lr: 0.0000201;  98 docs/s;   3097 sec
+[2020-07-23 19:10:16,861 INFO] Step 9950/50000; xent: 1.56; lr: 0.0000201;  98 docs/s;   3113 sec
+[2020-07-23 19:10:23,998 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.451.bert.pt, number of examples: 1993
+[2020-07-23 19:10:33,172 INFO] Step 10000/50000; xent: 1.50; lr: 0.0000200;  98 docs/s;   3129 sec
+[2020-07-23 19:10:33,174 INFO] Saving checkpoint ./models/models_check_points/model_step_10000.pt
+[2020-07-23 19:10:50,008 INFO] Step 10050/50000; xent: 1.47; lr: 0.0000200;  96 docs/s;   3146 sec
+[2020-07-23 19:11:04,866 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.853.bert.pt, number of examples: 1989
+[2020-07-23 19:11:06,189 INFO] Step 10100/50000; xent: 1.50; lr: 0.0000199; 100 docs/s;   3162 sec
+[2020-07-23 19:11:22,248 INFO] Step 10150/50000; xent: 1.65; lr: 0.0000199;  97 docs/s;   3178 sec
+[2020-07-23 19:11:38,445 INFO] Step 10200/50000; xent: 1.57; lr: 0.0000198;  99 docs/s;   3195 sec
+[2020-07-23 19:11:45,522 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.11.bert.pt, number of examples: 1997
+[2020-07-23 19:11:54,544 INFO] Step 10250/50000; xent: 1.67; lr: 0.0000198;  97 docs/s;   3211 sec
+[2020-07-23 19:12:10,739 INFO] Step 10300/50000; xent: 1.80; lr: 0.0000197;  95 docs/s;   3227 sec
+[2020-07-23 19:12:26,890 INFO] Step 10350/50000; xent: 1.71; lr: 0.0000197;  95 docs/s;   3243 sec
+[2020-07-23 19:12:27,585 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.237.bert.pt, number of examples: 1994
+[2020-07-23 19:12:43,019 INFO] Step 10400/50000; xent: 1.66; lr: 0.0000196;  96 docs/s;   3259 sec
+[2020-07-23 19:12:59,173 INFO] Step 10450/50000; xent: 1.65; lr: 0.0000196;  96 docs/s;   3275 sec
+[2020-07-23 19:13:08,809 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.383.bert.pt, number of examples: 1996
+[2020-07-23 19:13:09,831 INFO] Device ID 0
+[2020-07-23 19:13:09,831 INFO] Device cuda
+[2020-07-23 19:13:09,845 INFO] Loading checkpoint from ./models/models_check_points/model_step_5000.pt
+[2020-07-23 19:13:15,524 INFO] Step 10500/50000; xent: 1.62; lr: 0.0000195;  96 docs/s;   3292 sec
+[2020-07-23 19:13:31,753 INFO] Step 10550/50000; xent: 1.56; lr: 0.0000195;  96 docs/s;   3308 sec
+[2020-07-23 19:13:48,137 INFO] Step 10600/50000; xent: 1.52; lr: 0.0000194;  95 docs/s;   3324 sec
+[2020-07-23 19:13:50,901 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.666.bert.pt, number of examples: 1994
+[2020-07-23 19:14:04,653 INFO] Step 10650/50000; xent: 1.62; lr: 0.0000194;  92 docs/s;   3341 sec
+[2020-07-23 19:14:21,440 INFO] Step 10700/50000; xent: 1.65; lr: 0.0000193;  89 docs/s;   3358 sec
+[2020-07-23 19:14:34,772 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.153.bert.pt, number of examples: 1998
+[2020-07-23 19:14:38,188 INFO] Step 10750/50000; xent: 1.67; lr: 0.0000193;  91 docs/s;   3374 sec
+[2020-07-23 19:14:54,490 INFO] Step 10800/50000; xent: 1.56; lr: 0.0000192;  98 docs/s;   3391 sec
+[2020-07-23 19:15:10,882 INFO] Step 10850/50000; xent: 1.60; lr: 0.0000192;  95 docs/s;   3407 sec
+[2020-07-23 19:15:16,508 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.380.bert.pt, number of examples: 1999
+[2020-07-23 19:15:27,121 INFO] Step 10900/50000; xent: 1.53; lr: 0.0000192;  97 docs/s;   3423 sec
+[2020-07-23 19:15:43,077 INFO] Step 10950/50000; xent: 1.63; lr: 0.0000191;  97 docs/s;   3439 sec
+[2020-07-23 19:15:57,531 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.411.bert.pt, number of examples: 1994
+[2020-07-23 19:15:59,238 INFO] Step 11000/50000; xent: 1.58; lr: 0.0000191;  97 docs/s;   3455 sec
+[2020-07-23 19:16:15,314 INFO] Step 11050/50000; xent: 1.66; lr: 0.0000190;  97 docs/s;   3472 sec
+[2020-07-23 19:16:31,649 INFO] Step 11100/50000; xent: 1.60; lr: 0.0000190;  95 docs/s;   3488 sec
+[2020-07-23 19:16:39,230 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.161.bert.pt, number of examples: 1997
+[2020-07-23 19:16:48,086 INFO] Step 11150/50000; xent: 1.58; lr: 0.0000189;  95 docs/s;   3504 sec
+[2020-07-23 19:17:04,415 INFO] Step 11200/50000; xent: 1.57; lr: 0.0000189;  97 docs/s;   3521 sec
+[2020-07-23 19:17:20,922 INFO] Step 11250/50000; xent: 1.58; lr: 0.0000189;  94 docs/s;   3537 sec
+[2020-07-23 19:17:20,981 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.579.bert.pt, number of examples: 2000
+[2020-07-23 19:17:21,043 INFO] Device ID 0
+[2020-07-23 19:17:21,043 INFO] Device cuda
+[2020-07-23 19:17:21,057 INFO] Loading checkpoint from ./models/models_check_points/model_step_5000.pt
+[2020-07-23 19:17:23,807 INFO] Loading test dataset from ./data/bert_data\chinese_summary.test.0.bert.pt, number of examples: 1997
+[2020-07-23 19:17:23,811 INFO] * number of parameters: 113297921
+[2020-07-23 19:17:37,696 INFO] Step 11300/50000; xent: 1.69; lr: 0.0000188;  93 docs/s;   3554 sec
+[2020-07-23 19:17:54,174 INFO] Step 11350/50000; xent: 1.68; lr: 0.0000188;  94 docs/s;   3570 sec
+[2020-07-23 19:18:00,529 INFO] Device ID 0
+[2020-07-23 19:18:00,529 INFO] Device cuda
+[2020-07-23 19:18:00,544 INFO] Loading checkpoint from ./models/models_check_points/model_step_10000.pt
+[2020-07-23 19:18:03,226 INFO] Loading test dataset from ./data/bert_data\chinese_summary.test.0.bert.pt, number of examples: 1997
+[2020-07-23 19:18:03,229 INFO] * number of parameters: 113297921
+[2020-07-23 19:18:04,090 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.578.bert.pt, number of examples: 1995
+[2020-07-23 19:18:10,466 INFO] Step 11400/50000; xent: 1.73; lr: 0.0000187;  94 docs/s;   3587 sec
+[2020-07-23 19:18:26,802 INFO] Step 11450/50000; xent: 1.68; lr: 0.0000187;  95 docs/s;   3603 sec
+[2020-07-23 19:18:35,699 INFO] Device ID 0
+[2020-07-23 19:18:35,699 INFO] Device cuda
+[2020-07-23 19:18:35,715 INFO] Loading checkpoint from ./models/models_check_points/model_step_10000.pt
+[2020-07-23 19:18:38,406 INFO] Loading test dataset from ./data/bert_data\chinese_summary.test.0.bert.pt, number of examples: 1997
+[2020-07-23 19:18:38,411 INFO] * number of parameters: 113297921
+[2020-07-23 19:18:43,379 INFO] Step 11500/50000; xent: 1.73; lr: 0.0000187;  95 docs/s;   3620 sec
+[2020-07-23 19:18:45,780 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.548.bert.pt, number of examples: 1997
+[2020-07-23 19:19:00,169 INFO] Step 11550/50000; xent: 1.61; lr: 0.0000186;  94 docs/s;   3636 sec
+[2020-07-23 19:19:11,481 INFO] Device ID 0
+[2020-07-23 19:19:11,481 INFO] Device cuda
+[2020-07-23 19:19:11,496 INFO] Loading checkpoint from ./models/models_check_points/model_step_10000.pt
+[2020-07-23 19:19:14,187 INFO] Loading test dataset from ./data/bert_data\chinese_summary.test.0.bert.pt, number of examples: 1997
+[2020-07-23 19:19:14,191 INFO] * number of parameters: 113297921
+[2020-07-23 19:19:18,844 INFO] Step 11600/50000; xent: 1.54; lr: 0.0000186;  84 docs/s;   3655 sec
+[2020-07-23 19:19:37,718 INFO] Loading test dataset from ./data/bert_data\chinese_summary.test.1.bert.pt, number of examples: 1999
+[2020-07-23 19:19:41,354 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.584.bert.pt, number of examples: 1996
+[2020-07-23 19:19:51,029 INFO] Step 11650/50000; xent: 1.59; lr: 0.0000185;  48 docs/s;   3687 sec
+[2020-07-23 19:20:07,827 INFO] Step 11700/50000; xent: 1.60; lr: 0.0000185;  90 docs/s;   3704 sec
+[2020-07-23 19:20:23,845 INFO] Step 11750/50000; xent: 1.61; lr: 0.0000185;  97 docs/s;   3720 sec
+[2020-07-23 19:20:28,244 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.191.bert.pt, number of examples: 1989
+[2020-07-23 19:20:39,565 INFO] Step 11800/50000; xent: 1.68; lr: 0.0000184;  99 docs/s;   3736 sec
+[2020-07-23 19:20:43,708 INFO] Device ID 0
+[2020-07-23 19:20:43,708 INFO] Device cuda
+[2020-07-23 19:20:43,723 INFO] Loading checkpoint from ./models/models_check_points/model_step_10000.pt
+[2020-07-23 19:20:46,427 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.0.bert.pt, number of examples: 1997
+[2020-07-23 19:20:46,430 INFO] * number of parameters: 113297921
+[2020-07-23 19:21:04,149 INFO] Step 11850/50000; xent: 1.65; lr: 0.0000184;  63 docs/s;   3760 sec
+[2020-07-23 19:21:09,119 INFO] Validation xent: 3.26277 at step 10000
+[2020-07-23 19:21:20,128 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.684.bert.pt, number of examples: 1992
+[2020-07-23 19:21:22,727 INFO] Step 11900/50000; xent: 1.63; lr: 0.0000183;  84 docs/s;   3779 sec
+[2020-07-23 19:21:38,943 INFO] Step 11950/50000; xent: 1.53; lr: 0.0000183;  96 docs/s;   3795 sec
+[2020-07-23 19:21:55,367 INFO] Step 12000/50000; xent: 1.57; lr: 0.0000183;  93 docs/s;   3812 sec
+[2020-07-23 19:22:02,308 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.391.bert.pt, number of examples: 1996
+[2020-07-23 19:22:11,727 INFO] Step 12050/50000; xent: 1.42; lr: 0.0000182;  96 docs/s;   3828 sec

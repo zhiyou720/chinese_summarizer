@@ -243,10 +243,7 @@ class DataIterator(object):
                 self.iterations += 1
                 self._iterations_this_epoch += 1
                 # print(len(mini_batch))
-                if self.args.mode == 'test':  # TODO: predict
-                    _batch = Batch(mini_batch, self.device, self.is_test)
-                else:
-                    _batch = Batch(mini_batch, self.device, self.is_test)
+                _batch = Batch(mini_batch, self.device, self.is_test)
 
                 yield _batch
             return

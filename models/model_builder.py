@@ -87,7 +87,7 @@ class Summarizer(nn.Module):
         self.to(device)
 
     def load_cp(self, pt):
-        self.load_state_dict(pt['model'], strict=True)
+        self.load_state_dict(pt['models'], strict=True)
 
     def forward(self, x, segs, clss, mask, mask_cls, sentence_range=None):
         top_vec = self.bert(x, segs, mask)
