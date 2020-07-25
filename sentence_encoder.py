@@ -22,14 +22,18 @@ def gen_sentence_vector_use_third_party_func(sentence):
 def load_predict_gen_vector(path, arg):
     content_path = path + '.origin'
     abs_path = path + '.candidate'
+    print('Loading origin text')
     content_data = load_txt_data(content_path, origin=True)[:-1]
+    print('Loading abstract text')
     abs_data = load_txt_data(abs_path, origin=True)[:-1]
+
+    print('Loading finished')
 
     res = {}
     if check_dir(arg.tmp):
         res = load_variable(arg.tmp)
     else:
-        for i in tqdm(range(len(content_data))):
+        for i in tqdm(range(len(content_data)), desc="gen sentence vector"):
             content_raw = content_data[i].split('\t')
             doc_id = re.sub("\"", '', content_raw[0])
             sentence = content_raw[1].replace(' ', '')
@@ -76,7 +80,7 @@ def gen_bert_vector(data, pad_size=200, ):
 def add_vector_in_origin_file(path, vector_dict, save_path):
     res = []
     raw = load_txt_data(path)
-    for i in tqdm(range(len(raw))):
+    for i in tqdm(range(len(raw)), desc='add 2 origin'):
         doc_id = re.sub("\"", '', raw[i].split(',', 1)[0])
 
         new_vector = []
@@ -89,6 +93,7 @@ def add_vector_in_origin_file(path, vector_dict, save_path):
         new_vector = ", ".join(new_vector)
         new_raw = "{},\"{}\",\"{}\"".format(raw[i], sent_abs, new_vector)
         res.append(new_raw)
+    print("save new corpus to: {}".format(save_path))
     save_txt_file(res, save_path)
 
 
