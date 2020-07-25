@@ -26744,3 +26744,493 @@
 [2020-07-24 03:27:14,521 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.0.bert.pt, number of examples: 18965
 [2020-07-24 03:27:14,524 INFO] * number of parameters: 113297921
 [2020-07-24 03:29:10,348 INFO] Validation xent: 5.24907 at step 50000
+[2020-07-24 12:05:36,984 INFO] Device ID 0
+[2020-07-24 12:05:36,984 INFO] Device cuda
+[2020-07-24 12:05:37,069 INFO] loading archive file ./models/pytorch_pretrained_bert/bert_pretrain/
+[2020-07-24 12:05:37,069 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+[2020-07-24 12:05:39,497 INFO] Summarizer(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(21128, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): BertLayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (1): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (2): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (3): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (4): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (5): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (6): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (7): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (8): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (9): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (10): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (11): BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (encoder): TransformerInterEncoder(
+    (pos_emb): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (transformer_inter): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=768, out_features=768, bias=True)
+          (linear_values): Linear(in_features=768, out_features=768, bias=True)
+          (linear_query): Linear(in_features=768, out_features=768, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=768, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=768, bias=True)
+          (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=768, out_features=768, bias=True)
+          (linear_values): Linear(in_features=768, out_features=768, bias=True)
+          (linear_query): Linear(in_features=768, out_features=768, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=768, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=768, bias=True)
+          (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+    (wo): Linear(in_features=768, out_features=1, bias=True)
+    (sigmoid): Sigmoid()
+  )
+)
+[2020-07-24 12:05:39,512 INFO] * number of parameters: 113297921
+[2020-07-24 12:05:39,512 INFO] Start training...
+[2020-07-24 12:05:39,528 INFO] Loading train dataset from ./data/bert_data\chinese_summary.train.177.bert.pt, number of examples: 1999
+[2020-07-24 12:13:09,696 INFO] Device ID 0
+[2020-07-24 12:13:09,696 INFO] Device cuda
+[2020-07-24 12:13:09,774 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-24 12:13:12,623 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.0.bert.pt, number of examples: 18965
+[2020-07-24 12:13:12,623 INFO] * number of parameters: 113297921
+[2020-07-24 12:14:49,741 INFO] Validation xent: 5.24907 at step 50000
+[2020-07-24 12:21:37,769 INFO] Device ID 0
+[2020-07-24 12:21:37,769 INFO] Device cuda
+[2020-07-24 12:21:37,847 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-24 12:39:08,599 INFO] Device ID 0
+[2020-07-24 12:39:08,599 INFO] Device cuda
+[2020-07-24 12:39:08,677 INFO] Loading checkpoint from ./models/models_check_points/model_step_50000.pt
+[2020-07-24 12:39:11,396 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.0.bert.pt, number of examples: 10000
+[2020-07-24 12:39:11,396 INFO] * number of parameters: 113297921
+[2020-07-24 12:40:03,698 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.1.bert.pt, number of examples: 10000
+[2020-07-24 12:40:54,125 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.10.bert.pt, number of examples: 10000
+[2020-07-24 12:41:46,279 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.100.bert.pt, number of examples: 10000
+[2020-07-24 12:42:38,866 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.101.bert.pt, number of examples: 10000
+[2020-07-24 12:43:30,702 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.102.bert.pt, number of examples: 10000
+[2020-07-24 12:44:22,838 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.103.bert.pt, number of examples: 5636
+[2020-07-24 12:44:52,854 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.11.bert.pt, number of examples: 10000
+[2020-07-24 12:45:45,530 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.12.bert.pt, number of examples: 10000
+[2020-07-24 12:46:38,968 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.13.bert.pt, number of examples: 10000
+[2020-07-24 12:47:31,635 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.14.bert.pt, number of examples: 10000
+[2020-07-24 12:48:24,001 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.15.bert.pt, number of examples: 10000
+[2020-07-24 12:49:17,404 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.16.bert.pt, number of examples: 10000
+[2020-07-24 12:50:11,665 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.17.bert.pt, number of examples: 10000
+[2020-07-24 12:51:05,203 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.18.bert.pt, number of examples: 10000
+[2020-07-24 12:51:59,542 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.19.bert.pt, number of examples: 10000
+[2020-07-24 12:52:53,819 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.2.bert.pt, number of examples: 10000
+[2020-07-24 12:53:48,362 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.20.bert.pt, number of examples: 10000
+[2020-07-24 12:54:41,526 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.21.bert.pt, number of examples: 10000
+[2020-07-24 12:55:34,887 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.22.bert.pt, number of examples: 10000
+[2020-07-24 12:56:28,386 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.23.bert.pt, number of examples: 10000
+[2020-07-24 12:57:25,160 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.24.bert.pt, number of examples: 10000
+[2020-07-24 12:58:21,846 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.25.bert.pt, number of examples: 10000
+[2020-07-24 12:59:17,826 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.26.bert.pt, number of examples: 10000
+[2020-07-24 13:00:13,788 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.27.bert.pt, number of examples: 10000
+[2020-07-24 13:01:09,486 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.28.bert.pt, number of examples: 10000
+[2020-07-24 13:02:03,930 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.29.bert.pt, number of examples: 10000
+[2020-07-24 13:02:58,146 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.3.bert.pt, number of examples: 10000
+[2020-07-24 13:03:50,946 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.30.bert.pt, number of examples: 10000
+[2020-07-24 13:04:44,101 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.31.bert.pt, number of examples: 10000
+[2020-07-24 13:05:38,677 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.32.bert.pt, number of examples: 10000
+[2020-07-24 13:06:32,515 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.33.bert.pt, number of examples: 10000
+[2020-07-24 13:07:24,314 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.34.bert.pt, number of examples: 10000
+[2020-07-24 13:08:16,808 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.35.bert.pt, number of examples: 10000
+[2020-07-24 13:09:09,508 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.36.bert.pt, number of examples: 10000
+[2020-07-24 13:10:02,296 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.37.bert.pt, number of examples: 10000
+[2020-07-24 13:10:55,081 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.38.bert.pt, number of examples: 10000
+[2020-07-24 13:11:49,209 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.39.bert.pt, number of examples: 10000
+[2020-07-24 13:12:41,791 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.4.bert.pt, number of examples: 10000
+[2020-07-24 13:13:35,756 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.40.bert.pt, number of examples: 10000
+[2020-07-24 13:14:28,928 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.41.bert.pt, number of examples: 10000
+[2020-07-24 13:15:21,610 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.42.bert.pt, number of examples: 10000
+[2020-07-24 13:16:14,142 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.43.bert.pt, number of examples: 10000
+[2020-07-24 13:17:08,161 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.44.bert.pt, number of examples: 10000
+[2020-07-24 13:18:01,335 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.45.bert.pt, number of examples: 10000
+[2020-07-24 13:18:54,424 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.46.bert.pt, number of examples: 10000
+[2020-07-24 13:19:47,108 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.47.bert.pt, number of examples: 10000
+[2020-07-24 13:20:40,666 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.48.bert.pt, number of examples: 10000
+[2020-07-24 13:21:32,631 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.49.bert.pt, number of examples: 10000
+[2020-07-24 13:22:24,380 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.5.bert.pt, number of examples: 10000
+[2020-07-24 13:23:15,174 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.50.bert.pt, number of examples: 10000
+[2020-07-24 13:24:07,167 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.51.bert.pt, number of examples: 10000
+[2020-07-24 13:24:58,798 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.52.bert.pt, number of examples: 10000
+[2020-07-24 13:25:51,856 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.53.bert.pt, number of examples: 10000
+[2020-07-24 13:26:44,002 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.54.bert.pt, number of examples: 10000
+[2020-07-24 13:27:38,912 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.55.bert.pt, number of examples: 10000
+[2020-07-24 13:28:32,031 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.56.bert.pt, number of examples: 10000
+[2020-07-24 13:29:25,554 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.57.bert.pt, number of examples: 10000
+[2020-07-24 13:30:19,240 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.58.bert.pt, number of examples: 10000
+[2020-07-24 13:31:12,517 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.59.bert.pt, number of examples: 10000
+[2020-07-24 13:32:04,910 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.6.bert.pt, number of examples: 10000
+[2020-07-24 13:32:56,299 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.60.bert.pt, number of examples: 10000
+[2020-07-24 13:33:47,593 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.61.bert.pt, number of examples: 10000
+[2020-07-24 13:34:39,049 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.62.bert.pt, number of examples: 10000
+[2020-07-24 13:35:30,807 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.63.bert.pt, number of examples: 10000
+[2020-07-24 13:36:22,238 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.64.bert.pt, number of examples: 10000
+[2020-07-24 13:37:15,253 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.65.bert.pt, number of examples: 10000
+[2020-07-24 13:38:07,589 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.66.bert.pt, number of examples: 10000
+[2020-07-24 13:38:59,645 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.67.bert.pt, number of examples: 10000
+[2020-07-24 13:39:51,779 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.68.bert.pt, number of examples: 10000
+[2020-07-24 13:40:45,344 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.69.bert.pt, number of examples: 10000
+[2020-07-24 13:41:38,240 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.7.bert.pt, number of examples: 10000
+[2020-07-24 13:42:30,570 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.70.bert.pt, number of examples: 10000
+[2020-07-24 13:43:23,540 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.71.bert.pt, number of examples: 10000
+[2020-07-24 13:44:16,865 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.72.bert.pt, number of examples: 10000
+[2020-07-24 13:45:09,463 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.73.bert.pt, number of examples: 10000
+[2020-07-24 13:46:02,468 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.74.bert.pt, number of examples: 10000
+[2020-07-24 13:46:54,679 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.75.bert.pt, number of examples: 10000
+[2020-07-24 13:47:46,503 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.76.bert.pt, number of examples: 10000
+[2020-07-24 13:48:39,790 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.77.bert.pt, number of examples: 10000
+[2020-07-24 13:49:33,229 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.78.bert.pt, number of examples: 10000
+[2020-07-24 13:50:24,626 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.79.bert.pt, number of examples: 10000
+[2020-07-24 13:51:15,796 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.8.bert.pt, number of examples: 10000
+[2020-07-24 13:52:08,434 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.80.bert.pt, number of examples: 10000
+[2020-07-24 13:53:00,394 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.81.bert.pt, number of examples: 10000
+[2020-07-24 13:53:51,880 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.82.bert.pt, number of examples: 10000
+[2020-07-24 13:54:42,829 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.83.bert.pt, number of examples: 10000
+[2020-07-24 13:55:34,547 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.84.bert.pt, number of examples: 10000
+[2020-07-24 13:56:26,083 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.85.bert.pt, number of examples: 10000
+[2020-07-24 13:57:17,478 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.86.bert.pt, number of examples: 10000
+[2020-07-24 13:58:08,790 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.87.bert.pt, number of examples: 10000
+[2020-07-24 13:59:00,197 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.88.bert.pt, number of examples: 10000
+[2020-07-24 13:59:52,955 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.89.bert.pt, number of examples: 10000
+[2020-07-24 14:00:44,444 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.9.bert.pt, number of examples: 10000
+[2020-07-24 14:01:36,046 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.90.bert.pt, number of examples: 10000
+[2020-07-24 14:02:27,360 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.91.bert.pt, number of examples: 10000
+[2020-07-24 14:03:19,117 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.92.bert.pt, number of examples: 10000
+[2020-07-24 14:04:10,803 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.93.bert.pt, number of examples: 10000
+[2020-07-24 14:05:03,696 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.94.bert.pt, number of examples: 10000
+[2020-07-24 14:05:55,857 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.95.bert.pt, number of examples: 10000
+[2020-07-24 14:06:47,474 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.96.bert.pt, number of examples: 10000
+[2020-07-24 14:07:39,544 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.97.bert.pt, number of examples: 10000
+[2020-07-24 14:08:31,726 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.98.bert.pt, number of examples: 10000
+[2020-07-24 14:09:24,299 INFO] Loading test dataset from ./data/predict_data\chinese_summary.test.99.bert.pt, number of examples: 10000
+[2020-07-24 14:10:17,860 INFO] Validation xent: 4.98524 at step 50000

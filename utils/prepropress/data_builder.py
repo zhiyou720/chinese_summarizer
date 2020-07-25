@@ -442,5 +442,15 @@ def format2bert(args, json_data_set):
         datasets.append(b_data_dict)
     # TODO: data type
     data_type = 'test'
-    torch.save(datasets, args.bert_path + args.data_name + '.{}.{}.bert.pt'.format(data_type, 0))
-    logger.info('Saving to %s' % args.bert_path)
+    i = 0
+    j = 10000
+    k = 0
+
+    while i < len(datasets):
+        path = args.bert_path + args.data_name + '.{}.{}.bert.pt'.format(data_type, k)
+        torch.save(datasets[i:j], path)
+        k += 1
+        i = j
+        j = j + 10000
+
+        logger.info('Saving to %s' % path)

@@ -66,10 +66,6 @@ class Running(object):
         trainer.predict(test_iter, self.step)
 
 
-
-
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
