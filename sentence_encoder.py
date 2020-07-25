@@ -6,8 +6,12 @@ from utils.prepropress.data_builder import BertData
 import argparse
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
+import time
 
+print("INIT")
 sentence_transformer_model = SentenceTransformer('distiluse-base-multilingual-cased')
+print("FINISHED")
+time.sleep(1)
 
 
 def gen_sentence_vector_use_third_party_func(sentence):
@@ -30,11 +34,13 @@ def load_predict_gen_vector(path, arg):
             doc_id = re.sub("\"", '', content_raw[0])
             sentence = content_raw[1].replace(' ', '')
             abs_raw = abs_data[i]
-            sent_abs = ''.join(abs_raw.replace(' ', '').split('<q>'))
+            sent_abs = ','.join(abs_raw.replace(' ', '').split('<q>'))
             if 'CANNOTPREDICT' in sentence:
                 sent_abs = 'CAN NOT PREDICT'
             if not sent_abs:
                 sent_abs = sentence
+
+            res[doc_id] = [sent_abs]
 
             # abs_vector = gen_bert_vector(sent_abs)[0]
             # res[doc_id] = [sent_abs, abs_vector]
@@ -67,11 +73,23 @@ def gen_bert_vector(data, pad_size=200, ):
     return sentence_vector
 
 
-def add_vector_in_origin_file(path, vector_dict):
+def add_vector_in_origin_file(path, vector_dict, save_path):
+    res = []
     raw = load_txt_data(path)
-    for item in raw:
-        doc_id = re.sub("\"", '', item.split(',', 1)[0])
-        print(vector_dict[doc_id])
+    for i in tqdm(range(len(raw))):
+        doc_id = re.sub("\"", '', raw[i].split(',', 1)[0])
+
+        new_vector = []
+        sent_abs = vector_dict[doc_id][0]
+        vector = vector_dict[doc_id][1][0]
+
+        for fl in vector:
+            fl = format(fl, '.8f')
+            new_vector.append(fl)
+        new_vector = ", ".join(new_vector)
+        new_raw = "{},\"{}\",\"{}\"".format(raw[i], sent_abs, new_vector)
+        res.append(new_raw)
+    save_txt_file(res, save_path)
 
 
 if __name__ == '__main__':
@@ -85,13 +103,16 @@ if __name__ == '__main__':
     parser.add_argument('-min_src_ntokens', default=0, type=int)
     parser.add_argument('-max_src_ntokens', default=200, type=int)
     parser.add_argument('-tmp', default='./temp/sentence_vector_tmp.variable', type=str)
+    parser.add_argument('-result', default='./results/new_corpus.csv', type=str)
     _args = parser.parse_args()
 
+    print("INIT")
     bert = BertData(_args)
+    print("FINISHED")
+    time.sleep(1)
     _v_dict = load_predict_gen_vector(_path, _args)
-
     # gen_bert_vector(_data, _pad_size)
 
     # a = gen_sentence_vector_use_third_party_func('我是谁')
     # print(len(a[0]))
-    add_vector_in_origin_file('./data/raw_data/corpus.csv', _v_dict)
+    add_vector_in_origin_file('./data/raw_data/corpus.csv', _v_dict, _args.result)
