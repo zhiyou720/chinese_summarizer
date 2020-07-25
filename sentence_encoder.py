@@ -4,6 +4,15 @@ import re
 from utils.dataio import load_txt_data, save_txt_file
 from utils.prepropress.data_builder import BertData
 import argparse
+from sentence_transformers import SentenceTransformer
+from tqdm import tqdm
+
+sentence_transformer_model = SentenceTransformer('distiluse-base-multilingual-cased')
+
+
+def gen_sentence_vector_use_third_party_func(sentence):
+    sentence_emb = sentence_transformer_model.encode(sentence)
+    return sentence_emb
 
 
 def load_predict_gen_vector(path):
@@ -14,7 +23,7 @@ def load_predict_gen_vector(path):
 
     res = {}
 
-    for i in range(len(content_data)):
+    for i in tqdm(range(len(content_data))):
         content_raw = content_data[i].split('\t')
         doc_id = re.sub("\"", '', content_raw[0])
         sentence = content_raw[1].replace(' ', '')
@@ -25,9 +34,11 @@ def load_predict_gen_vector(path):
         if not sent_abs:
             sent_abs = sentence
 
-        abs_vector = gen_bert_vector(sent_abs)[0]
+        # abs_vector = gen_bert_vector(sent_abs)[0]
+        # res[doc_id] = [sent_abs, abs_vector]
+        abs_vector = gen_sentence_vector_use_third_party_func(sent_abs)
         res[doc_id] = [sent_abs, abs_vector]
-        print(sent_abs, abs_vector, abs_vector.size())
+        # print(sent_abs, abs_vector, abs_vector.size())
     return res
 
 
@@ -41,7 +52,6 @@ def _pad(data, pad_id, width=-1):
 def gen_bert_vector(data, pad_size=200):
     model = Bert('./models/pytorch_pretrained_bert/bert_pretrain/', './temp/', load_pretrained_bert=True,
                  bert_config=None)
-
     b_data = bert.pre_process(data, tgt=[list('NONE')], oracle_ids=[0], flag_i=0)
     indexed_tokens, labels, segments_ids, cls_ids, src_txt, tgt_txt = b_data
     sent_data = {"src": indexed_tokens, "segs": segments_ids}
@@ -52,6 +62,13 @@ def gen_bert_vector(data, pad_size=200):
     sentence_vector = model(src, segs, mask)
 
     return sentence_vector
+
+
+def add_vector_in_origin_file(path, vector_dict):
+    raw = load_txt_data(path)
+    for item in raw:
+        doc_id = re.sub("\"", '', item.split(',', 1)[0])
+        print(vector_dict[doc_id])
 
 
 if __name__ == '__main__':
@@ -67,6 +84,10 @@ if __name__ == '__main__':
     _args = parser.parse_args()
 
     bert = BertData(_args)
-    load_predict_gen_vector(_path)
+    _v_dict = load_predict_gen_vector(_path)
 
     # gen_bert_vector(_data, _pad_size)
+
+    # a = gen_sentence_vector_use_third_party_func('我是谁')
+    # print(len(a[0]))
+    add_vector_in_origin_file('./data/raw_data/corpus.csv', _v_dict)
